@@ -11,9 +11,11 @@
  padding-right: 50%;
 
 }
-.header_navigation_language{
+.header_navigation_menu{
 padding-top: 0.5rem;
 }
-.header_navigation_difficalty{
-padding-top: 0.5rem;
+
+.header_navigation_menu :hover{
+   opacity: 80%;
+   padding-top: 1px;
 }
