@@ -1,0 +1,19 @@
+
+.header{
+    background-color: rgba(222, 184, 135, 0.541);
+}
+.header_navigation{
+    display: flex;
+    justify-content: space-around;
+}
+.header_navigation_logo{
+ color: brown;
+ padding-right: 50%;
+
+}
+.header_navigation_language{
+padding-top: 0.5rem;
+}
+.header_navigation_difficalty{
+padding-top: 0.5rem;
+}

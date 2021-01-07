@@ -1,10 +1,9 @@
 import './App.css';
+import Navigation from '../Navigation/Navigation'
 function App() {
   return (
     <div>
-      <div className="header">
-        <div className="navigation">навигация</div>
-      </div>
+      <Navigation/>
       <div className="content_left">
         <div>Контент слева</div>
       </div>
