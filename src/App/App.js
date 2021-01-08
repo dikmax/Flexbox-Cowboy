@@ -1,16 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
 import Navigation from '../Navigation/Navigation'
+import LeftContent from '../LeftContent/LeftContent'
+import RiteContent from '../RiteContent/RiteContent'
+import Footer from '../Footer/Footer'
+
 function App() {
   return (
     <div>
       <Navigation/>
-      <div className="content_left">
-        <div>Контент слева</div>
-      </div>
-      <div className="content_rite">
-        <div>Гриид</div>
-      </div>
-      <div className="footer"><div>Подвал</div></div>
+      <LeftContent/>
+      <RiteContent/>
+      <Footer/>
     </div>
   );
 }
