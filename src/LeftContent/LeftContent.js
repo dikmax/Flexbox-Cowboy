@@ -22,7 +22,7 @@ function LeftContent() {
       <pre id="after">скобки закрываются</pre>
     </div>
     <div className="content_left_button">
-      //блок в ширину 40px от этого и не меняет местоположение
+      //не получается выровнять по правому краю.
         <button type="button"
              className="btn  btn-secondary">
                Сквозь тернии к звездам
