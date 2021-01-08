@@ -10,11 +10,14 @@ function App() {
   return (
     <div>
       <Navigation/>
-      <LeftContent/>
-      <RiteContent/>
+      <div className='content'>
+       <LeftContent/>
+       <RiteContent/>
+      </div>
       <Footer/>
     </div>
   );
 }
 
 export default App;
+
