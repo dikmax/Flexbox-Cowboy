@@ -5,7 +5,7 @@ import './RiteContent.css';
 function RiteContent() {
   return (
   <div className="content_rite">
-    <div>Flexbox element</div>
+    <div><h1>Flexbox element</h1></div>
   </div>
   );
 }

@@ -22,10 +22,11 @@ function LeftContent() {
       <pre id="after">скобки закрываются</pre>
     </div>
     <div className="content_left_button">
-            <button type="button"
+      //блок в ширину 40px от этого и не меняет местоположение
+        <button type="button"
              className="btn  btn-secondary">
                Сквозь тернии к звездам
-            </button>
+        </button>
     </div>
   </div>
   );
