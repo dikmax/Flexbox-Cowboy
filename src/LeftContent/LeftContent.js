@@ -21,7 +21,7 @@ function LeftContent() {
       <textarea id="code" defaultValue="поле ввода"></textarea>
       <pre id="after">скобки закрываются</pre>
     </div>
-    <div className="content_left_button">
+    <div className="content-left-button">
       //не получается выровнять по правому краю.
         <button type="button"
              className="btn  btn-secondary">
