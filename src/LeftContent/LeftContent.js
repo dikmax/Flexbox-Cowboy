@@ -19,7 +19,6 @@ class LeftContent extends React.Component{
     });
   };
 
-
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -51,7 +50,10 @@ class LeftContent extends React.Component{
     </div>
     <div className="content-left-button">
       //не получается выровнять по правому краю.
-      {this.props.editBtn}
+      <button type="button"
+      className="btn  btn-secondary">
+     'Сквозь тернии к звездам'
+       </button>
     </div>
   </div>
   )}};

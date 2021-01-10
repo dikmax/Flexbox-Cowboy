@@ -8,21 +8,18 @@ const test = <img src={Cowboy} alt="Нет ковбоя"></img>;
 class RiteContent extends React.Component{
   constructor(props){
     super(props);
-
     this.state = {
     FlexMoving:  {
-                 display: "flex",             
-                 justifyContent: "center",
-                 }};
-                
-  
+     display: "flex",             
+     justifyContent: "center",
+                 }};  
 };
 
 
 render(){
   return (
     <div className="content-rite">
-      <div style={this.state.FlexMoving}><div className="img-bad-cowboy">{test}</div></ div>
+      <div style={this.state.FlexMoving}><div className="img-bad-cowboy"></div></div>
     </div>
     );
 } };
