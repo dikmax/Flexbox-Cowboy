@@ -6,7 +6,15 @@ import LeftContent from '../LeftContent/LeftContent'
 import RiteContent from '../RiteContent/RiteContent'
 import Footer from '../Footer/Footer'
 
-function App() {
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+    classFlex: null,
+    testApp: 'App good work',
+  }};
+
+render(){
   return (
     <div>
       <Navigation/>
@@ -17,7 +25,7 @@ function App() {
       <Footer/>
     </div>
   );
-}
+} };
 
 export default App;
 

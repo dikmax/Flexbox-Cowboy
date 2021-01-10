@@ -7,7 +7,7 @@ class LeftContent extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      test: null
+      test: 'TEST TEXTAREA'
     };
   };
  
@@ -34,9 +34,9 @@ class LeftContent extends React.Component{
       <ul>
        <li>{this.state.test}</li>
        <li>Описание элементов 1</li>
-       <li>Описание элементов 1</li>
-       <li>Описание элементов 1</li>
-       <li>Описание элементов 1</li>
+       <li>Описание элементов 2</li>
+       <li>Описание элементов 3</li>
+       <li>Описание элементов 4</li>
       </ul>
     </div>
     <div className="editor">
