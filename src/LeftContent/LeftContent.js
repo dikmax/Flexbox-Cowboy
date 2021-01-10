@@ -33,7 +33,7 @@ class LeftContent extends React.Component{
       <ul>
        <li>{this.state.test}</li>
        <li></li>
-       <li>'look'</li>
+       <li>Окунь</li>
        <li>Описание элементов 3</li>
        <li>Описание элементов 4</li>
       </ul>

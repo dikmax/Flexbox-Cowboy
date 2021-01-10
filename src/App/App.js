@@ -10,10 +10,10 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-    name: 'classFlex',
+    editBtnValue: ['good','ffod']
   }};
 
- 
+
 
 render(){
   return (
@@ -21,7 +21,7 @@ render(){
       <Navigation/>
       <div className='content' >
         <LeftContent />
-        <RiteContent />
+        <RiteContent move = {this.state.editBtnValue}   />
       </div>
       <Footer/>
     </div>
