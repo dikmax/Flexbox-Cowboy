@@ -8,11 +8,10 @@ class RiteContent extends React.Component{
     super(props);
 
     this.state = {
-    FlexMoving:  {backgroundColor: "#44014C",
-                 width: "300px",
-                 minHeight: "200px",
-                 justifyContent: "flex-end"}
-  
+    FlexMoving:  {
+                 display: "flex",
+                 justifyContent: "center",
+                 alignItems: "flex-end"}
   }};
 
 
