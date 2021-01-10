@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import App from '../App/App'
 import './LeftContent.css';
 import 'bootswatch/dist/sketchy/bootstrap.min.css';
-import RiteAndLeftContent from "../RiteAndLeftContent/RiteAndLeftContent"
 
 class LeftContent extends React.Component{
   constructor(props){
