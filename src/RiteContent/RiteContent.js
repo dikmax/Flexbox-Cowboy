@@ -8,13 +8,18 @@ class RiteContent extends React.Component{
     super(props);
 
     this.state = {
-    classFlex: null,
+    FlexMoving:  {backgroundColor: "#44014C",
+                 width: "300px",
+                 minHeight: "200px",
+                 justifyContent: "flex-end"}
+  
   }};
+
 
 render(){
   return (
     <div className="content-rite">
-      <div style={{ backgroundColor: "#44014C", width: "300px", minHeight: "200px", justifyContent: "flex-end"}} ><h1>Flexbox element</h1></ div>
+      <div style={this.state.FlexMoving} ><h1>Flexbox element</h1></ div>
     </div>
     );
 } };
