@@ -9,15 +9,19 @@ class RiteAndLeftContent extends React.Component{
     super(props);
 
     this.state = {
-    classFlex: null,
+    btn:  <button type="button"
+      className="btn  btn-secondary">
+        Сквозь тернии к звездам
+ </button>
   }};
 
+ 
 render(){
   return (
-    <div className="content">
-      <RiteContent/>
-      <LeftContent />
-    </div>
+    <>
+        <LeftContent />
+        <RiteContent/>
+    </>
     );
 } };
 

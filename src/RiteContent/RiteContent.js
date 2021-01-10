@@ -10,15 +10,16 @@ class RiteContent extends React.Component{
     this.state = {
     FlexMoving:  {
                  display: "flex",
+                 
                  justifyContent: "center",
-                 alignItems: "center",}
+                 }
   }};
 
 
 render(){
   return (
     <div className="content-rite">
-      <div style={this.state.FlexMoving} ><h1>Flexbox element</h1></ div>
+      <div style={this.state.FlexMoving}><h1>{this.state.FlexMoving.display}</h1></ div>
     </div>
     );
 } };

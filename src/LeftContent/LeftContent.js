@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from '../App/App'
 import './LeftContent.css';
 import 'bootswatch/dist/sketchy/bootstrap.min.css';
+import RiteAndLeftContent from "../RiteAndLeftContent/RiteAndLeftContent"
 
 class LeftContent extends React.Component{
   constructor(props){
@@ -51,7 +52,7 @@ class LeftContent extends React.Component{
     </div>
     <div className="content-left-button">
       //не получается выровнять по правому краю.
-        <button type="button"
+      <button type="button"
              className="btn  btn-secondary">
                Сквозь тернии к звездам
         </button>

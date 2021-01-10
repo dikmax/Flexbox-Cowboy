@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation'
 import LeftContent from '../LeftContent/LeftContent'
 import RiteContent from '../RiteContent/RiteContent'
 import Footer from '../Footer/Footer'
+import RiteAndLeftContent from  '../RiteAndLeftContent/RiteAndLeftContent'
 
 class App extends React.Component{
   constructor(props){
@@ -19,8 +20,7 @@ render(){
     <div>
       <Navigation/>
       <div className='content' >
-       <LeftContent/>
-       <RiteContent/>
+       <RiteAndLeftContent/>
       </div>
       <Footer/>
     </div>
