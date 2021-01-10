@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from '../App/App'
 import './LeftContent.css';
 import 'bootswatch/dist/sketchy/bootstrap.min.css';
 
@@ -21,20 +22,19 @@ class LeftContent extends React.Component{
 
   onSubmit = (e) => {
     e.preventDefault();
-   /*-- this.props.className --*/
 
   };
 
 
   render(){
   return (
-  <div className="content-left">
+  <div className="content-left" >
     <div><p>Здесь мы описываем задачу</p></div>
     <div>
       <ul>
        <li>{this.state.test}</li>
-       <li>Описание элементов 1</li>
-       <li>Описание элементов 2</li>
+       <li></li>
+       <li>'look'</li>
        <li>Описание элементов 3</li>
        <li>Описание элементов 4</li>
       </ul>

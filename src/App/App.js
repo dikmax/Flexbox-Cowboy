@@ -9,16 +9,16 @@ import Footer from '../Footer/Footer'
 class App extends React.Component{
   constructor(props){
     super(props);
+
     this.state = {
-    classFlex: null,
-    testApp: 'App good work',
+    classFlex:'classFlex',
   }};
 
 render(){
   return (
     <div>
       <Navigation/>
-      <div className='content'>
+      <div className='content' >
        <LeftContent/>
        <RiteContent/>
       </div>
