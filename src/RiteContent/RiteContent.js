@@ -11,7 +11,7 @@ class RiteContent extends React.Component{
     FlexMoving:  {
                  display: "flex",
                  justifyContent: "center",
-                 alignItems: "flex-end"}
+                 alignItems: "center",}
   }};
 
 
