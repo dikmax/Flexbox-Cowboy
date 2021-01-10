@@ -51,10 +51,7 @@ class LeftContent extends React.Component{
     </div>
     <div className="content-left-button">
       //не получается выровнять по правому краю.
-      <button type="button"
-             className="btn  btn-secondary">
-               Сквозь тернии к звездам
-        </button>
+      {this.props.editBtn}
     </div>
   </div>
   )}};

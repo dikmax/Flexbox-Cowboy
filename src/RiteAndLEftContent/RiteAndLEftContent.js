@@ -7,13 +7,16 @@ import LeftContent from '../LeftContent/LeftContent';
 class RiteAndLeftContent extends React.Component{
   constructor(props){
     super(props);
-    
-    
   };
+
+  editBtn = <button type="button"
+  className="btn  btn-secondary">
+    'Сквозь тернии к звездам'
+</button>
  render(){
   return (
     <>
-        <LeftContent />
+        <LeftContent editBtn = {this.editBtn} />
         <RiteContent/>
     </>
     );
