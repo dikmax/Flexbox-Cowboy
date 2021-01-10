@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './RiteContent.css';
 import Cowboy from '../Source/jpeg/cowboy.jpg'
  
+
+const test = <img src={Cowboy} alt="Нет ковбоя"></img>;
 class RiteContent extends React.Component{
   constructor(props){
     super(props);
@@ -20,7 +22,7 @@ class RiteContent extends React.Component{
 render(){
   return (
     <div className="content-rite">
-      <div style={this.state.FlexMoving}><h1>{'work'}</h1></ div>
+      <div style={this.state.FlexMoving}><div>{test}</div></ div>
     </div>
     );
 } };
