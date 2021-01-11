@@ -45,7 +45,6 @@ class LeftContent extends React.Component{
                  defaultValue="поле ввода"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
-              
       <pre id="after">скобки закрываются</pre>
     </div>
     <div className="content-left-button">
