@@ -12,20 +12,13 @@ class LeftContent extends React.Component{
     };
   };
  
-
   flexChange = (e) =>{
     this.setState({
       test: e.target.value
     });
   };
   
-
-
- 
-
-
-  render(){
-    
+  render(){  
   return (
   <div className="content-left" >
     <div><p>Здесь мы описываем задачу</p></div>
