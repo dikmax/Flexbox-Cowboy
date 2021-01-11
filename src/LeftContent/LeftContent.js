@@ -41,14 +41,10 @@ class LeftContent extends React.Component{
       <pre id="after">скобки закрываются</pre>
     </div>
     <div className="content-left-button">
-      //не получается выровнять по правому краю.
       <button type="button"
-      onClick = {()=>
-        this.props.inputLeftValue(this.state.test)}
-      className ="btn  btn-secondary">
-        
-     'Сквозь тернии к звездам'
-       </button>
+              onClick = {()=>this.props.inputLeftValue(this.state.test)}
+              className ="btn  btn-secondary">   
+            'Сквозь тернии к звездам' </button>
     </div>
   </div>
   )}};

@@ -9,9 +9,9 @@ class RiteContent extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-    FlexMoving:  {
-     display: "flex",             
-     justifyContent: "center",
+    FlexMoving:  {  
+     display: 'flex',       
+     justifyContent: 'center',
                  }};  
 };
 
