@@ -25,8 +25,10 @@ class ContenteynerRiteAndLeft extends React.Component{
     const {display, justifyContent} = this.state.FlexMoving
     return (
       <>
-        <LeftContent inputLeftValue={this.inputLeftValue}
-           before = {display} after={justifyContent} />
+        <LeftContent
+         inputLeftValue={this.inputLeftValue}
+         before = {display}
+         after={justifyContent} />
         <RiteContent 
         FlexMoving = {this.state.FlexMoving}
         />
