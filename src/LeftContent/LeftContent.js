@@ -8,7 +8,7 @@ class LeftContent extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      test: 'TEST TEXTAREA'
+      test: 'left'
     };
   };
  
