@@ -12,16 +12,14 @@ class ContenteynerRiteAndLeft extends React.Component{
         FlexMoving:  {  
           display: 'flex',       
           justifyContent: 'center',
-         }
-         
-    }};
+        }     
+      }};
  
-  inputLeftValue = (value) => {
-      this.setState({ display: value })
-  };
+ 
 
   
   render(){
+   
     const {display, justifyContent} = this.state.FlexMoving
     return (
       <>
