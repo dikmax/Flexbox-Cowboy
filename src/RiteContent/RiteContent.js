@@ -19,7 +19,7 @@ class RiteContent extends React.Component{
 render(){
   return (
     <div className="content-rite">
-      <div style={this.state.FlexMoving} className="img-bad-cowboy">
+      <div style={this.props.FlexMoving} className="img-bad-cowboy">
         <img src={Cowboy} alt="тут могла быть ваша реклама"></img>
      </div>
     </div>
