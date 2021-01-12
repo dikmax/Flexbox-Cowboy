@@ -25,11 +25,11 @@ class LeftContent extends React.Component{
     <div><p>Здесь мы описываем задачу</p></div>
     <div>
       <ul>
-       <li>{this.state.test}</li>
-       <li></li>
-       <li>Окунь</li>
-       <li>Описание элементов 3</li>
-       <li>Описание элементов 4</li>
+       <li key='1'>{this.state.test}</li>
+       <li key='2'></li>
+       <li key='3'></li>
+       <li key='4'></li>
+       <li key='5'></li>
       </ul>
     </div>
     <div className="editor">

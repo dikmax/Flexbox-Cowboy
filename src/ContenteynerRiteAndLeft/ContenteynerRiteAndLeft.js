@@ -8,9 +8,10 @@ class ContenteynerRiteAndLeft extends React.Component{
     constructor(props){
       super(props);
       this.state = {
-        before: ['display: flex;'],
-        userCode: ['userCodeQ'],
-        after: ['justify-content: flex-end;']
+        FlexMoving:  {  
+          display: 'flex',       
+          justifyContent: 'center',
+         }
     }};
   
   
@@ -23,11 +24,9 @@ class ContenteynerRiteAndLeft extends React.Component{
     return (
       <>
         <LeftContent inputLeftValue={this.inputLeftValue}
-            userCode = {this.state.userCode}
-            after ={this.state.after} 
-            before = {this.state.before} />
+            FlexMoving = {this.state.FlexMoving} />
         <RiteContent 
-        userCode = {this.state.userCode}
+        FlexMoving = {this.state.FlexMoving}
         />
       </>
     );
