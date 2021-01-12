@@ -4,6 +4,7 @@ import './ContenteynerRiteAndLeft.css';
 import RiteContent from '../RiteContent/RiteContent';
 import LeftContent from '../LeftContent/LeftContent';
 
+
 class ContenteynerRiteAndLeft extends React.Component{
     constructor(props){
       super(props);
@@ -12,19 +13,20 @@ class ContenteynerRiteAndLeft extends React.Component{
           display: 'flex',       
           justifyContent: 'center',
          }
+         
     }};
-  
-  
+ 
   inputLeftValue = (value) => {
-      this.setState({ userCode: value })
+      this.setState({ display: value })
   };
+
   
   render(){
- 
+    const {display, justifyContent} = this.state.FlexMoving
     return (
       <>
         <LeftContent inputLeftValue={this.inputLeftValue}
-            FlexMoving = {this.state.FlexMoving} />
+           before = {display} after={justifyContent} />
         <RiteContent 
         FlexMoving = {this.state.FlexMoving}
         />
