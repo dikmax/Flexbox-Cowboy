@@ -8,8 +8,9 @@ class ContenteynerRiteAndLeft extends React.Component{
     constructor(props){
       super(props);
       this.state = {
-      userCode: ['']
-
+      after: [''],
+      userCode: [''],
+      before: ['']
     }};
   
   inputLeftValue = (value) => {
