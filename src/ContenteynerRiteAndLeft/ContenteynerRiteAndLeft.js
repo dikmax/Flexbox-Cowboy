@@ -8,19 +8,19 @@ class ContenteynerRiteAndLeft extends React.Component{
     constructor(props){
       super(props);
       this.state = {
-      editBtnValue: ['']
+      userCode: ['']
 
     }};
   
   inputLeftValue = (value) => {
-      this.setState({ editBtnValue: value })
+      this.setState({ userCode: value })
   };
   
   render(){
     return (
       <>
         <LeftContent inputLeftValue={this.inputLeftValue} />
-        <RiteContent move = {this.state.editBtnValue}   />
+        <RiteContent move = {this.state.userCode}   />
       </>
     );
   } };
