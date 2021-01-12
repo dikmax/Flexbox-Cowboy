@@ -6,9 +6,9 @@ class Questions extends React.Component{
     super(props);
     this.state = {
     Conserva:  {  
-     nachalo: null,     
-     vopros: null,
-     konec: null,
+     nachalo: [''],     
+     vopros: [''],
+     konec: [''],
     }};  
 };
 generationQ = (up, mid,low) => {
@@ -19,6 +19,8 @@ generationQ = (up, mid,low) => {
             konec: low}
     });
 };    
+
+Questions1 = generationQ();
     
     
 
@@ -35,4 +37,4 @@ render(){
 
 
 
-export default RiteContent;
+export default Questions;
