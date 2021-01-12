@@ -19,6 +19,7 @@ class LeftContent extends React.Component{
   };
   
   render(){  
+   
   return (
   <div className="content-left" >
     <div><p>Здесь мы описываем задачу</p></div>
@@ -32,19 +33,19 @@ class LeftContent extends React.Component{
       </ul>
     </div>
     <div className="editor">
-      <pre id="befor"> Начало задачи: скобки открываются </pre>
 
+      <pre id="befor"> {this.props.before}</pre>
       <textarea  id="code"
                  defaultValue="поле ввода"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
-      <pre id="after">скобки закрываются</pre>
+      <pre id="after">{this.props.after}</pre>
     </div>
     <div className="content-left-button">
       <button type="button"
               onClick = {()=>this.props.inputLeftValue(this.state.test)}
               className ="btn  btn-secondary">   
-            'Сквозь тернии к звездам' </button>
+            'Дорогу осилит идущий' </button>
     </div>
   </div>
   )}};
