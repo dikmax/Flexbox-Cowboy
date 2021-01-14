@@ -31,21 +31,19 @@ class LeftContent extends React.Component{
     <div className="left-task"><p>Здесь мы описываем задачу</p></div>
     <div>
       <ul>
-       <li >{this.state.test}</li>
-       <li >{this.props.before}</li>
-       <li >{this.props.after}</li>
-       <li ></li>
-       <li ></li> 
+       <li >Ferst</li>
+       <li >Second</li>
+       <li >Three</li>
       </ul>
     </div>
     <div className="editor">
 
-      <pre id="befor"> {this.props.before}</pre>
+      <pre id="befor"> Odin</pre>
       <textarea  id="code"
                  defaultValue="поле ввода"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
-      <pre id="after">{this.props.after}</pre>
+      <pre id="after">Viva Loviva</pre>
     </div>
     <div className="content-left-button">
       <button type="button"
