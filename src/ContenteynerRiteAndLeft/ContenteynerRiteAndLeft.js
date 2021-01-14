@@ -15,6 +15,9 @@ class ContenteynerRiteAndLeft extends React.Component{
           justifyContent: '',
          }     
       }};
+      arrayQuestions = [
+      
+      ];
  
       inputLeftValue = (value) => {
         this.setState({ display: value })

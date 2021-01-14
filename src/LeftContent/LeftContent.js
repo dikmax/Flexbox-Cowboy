@@ -17,6 +17,8 @@ class LeftContent extends React.Component{
       test: e.target.value
     });
   };
+
+
   
   render(){  
    
