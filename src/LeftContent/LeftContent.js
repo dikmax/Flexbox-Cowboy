@@ -23,7 +23,11 @@ class LeftContent extends React.Component{
 
 
   render(){  
-   
+
+  const leftLi = this.props.map[1][1].map(function(item) {
+    return(<li>{item}</li>)
+  });
+  
   return (
   <div className="content-left" >
 
@@ -35,7 +39,7 @@ class LeftContent extends React.Component{
     <div className="left-task"><p>{this.props.map[0][1]}</p></div>
     <div>
       <ul>
-      {this.unLeft}
+      {leftLi}
       </ul>
     </div>
     <div className="editor">
