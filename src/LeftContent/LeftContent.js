@@ -11,9 +11,9 @@ class LeftContent extends React.Component{
       test: 'left'
     };
   };
-
+  
   testLeft = () =>{
-    console.log(this.props.map.('description'))
+    console.log(this.props.map[0][1])
   };
   
   render(){  

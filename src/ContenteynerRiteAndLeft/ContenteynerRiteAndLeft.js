@@ -11,7 +11,7 @@ class ContenteynerRiteAndLeft extends React.Component{
       this.state = {
         FlexMoving:  null   
       }};
-       map = new Map([
+       map = ([
         ['description',  'Добро пожаловать в ... Игра, в которой тебе нужно ... и его друзьям написанием CSS кода! Направь этого ... на лилию справа используя свойство justify-content, которое выравнивает элементы горизонтально и принимает следующие значения:'],
         ['ulElement', [
           ['flex-start Элементы выравниваются по левой стороне контейнера.'],
