@@ -11,14 +11,10 @@ class LeftContent extends React.Component{
       test: 'left'
     };
   };
- 
-  flexChange = (e) =>{
-    this.setState({
-      test: e.target.value
-    });
+
+  testLeft = () =>{
+    console.log(this.props.map.('description'))
   };
-
-
   
   render(){  
    
@@ -27,7 +23,7 @@ class LeftContent extends React.Component{
 
     <div>
       <div><p>Сменить уровень</p></div>
-      <div><button>Назад</button><button>Вперед</button></div>
+      <div><button onClick = {this.TestLeft} >Назад</button><button>Вперед</button></div>
     </div>
 
     <div className="left-task"><p>Здесь мы описываем задачу</p></div>
@@ -49,7 +45,7 @@ class LeftContent extends React.Component{
     </div>
     <div className="content-left-button">
       <button type="button"
-              onClick = {()=>this.props.inputLeftValue(this.state.test)}
+              onClick = {this.testLeft}
               className ="btn  btn-secondary">   
             'Дорогу осилит идущий' </button>
     </div>
