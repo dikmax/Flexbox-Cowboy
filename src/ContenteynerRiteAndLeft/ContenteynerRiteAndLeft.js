@@ -26,7 +26,7 @@ class ContenteynerRiteAndLeft extends React.Component{
     const {display, justifyContent} = this.state.FlexMoving;
     const Qwest = [
       { id:1},
-      { id:2},
+      { id:2}, 
       { id:3},
       { id:4},
       { id:5}

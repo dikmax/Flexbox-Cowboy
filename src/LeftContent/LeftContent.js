@@ -22,14 +22,20 @@ class LeftContent extends React.Component{
    
   return (
   <div className="content-left" >
-    <div><p>Здесь мы описываем задачу</p></div>
+
+    <div>
+      <div><p>Сменить уровень</p></div>
+      <div><button>Назад</button><button>Вперед</button></div>
+    </div>
+
+    <div className="left-task"><p>Здесь мы описываем задачу</p></div>
     <div>
       <ul>
        <li >{this.state.test}</li>
        <li >{this.props.before}</li>
        <li >{this.props.after}</li>
        <li ></li>
-       <li ></li>
+       <li ></li> 
       </ul>
     </div>
     <div className="editor">

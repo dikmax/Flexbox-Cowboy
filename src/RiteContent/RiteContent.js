@@ -14,7 +14,7 @@ class RiteContent extends React.Component{
      justifyContent: 'center',
     }};  
 };
-
+ 
 
 render(){
   const array = this.props.FlexMoving.FlexMoving.display[3]
