@@ -17,7 +17,7 @@ class RiteContent extends React.Component{
  
 
 render(){
-  const array = this.props.FlexMoving.FlexMoving.display[3]
+  const array = '';
   return (
     <div className="content-rite">
       <div style={this.props.FlexMoving}className="img-bad-cowboy">
