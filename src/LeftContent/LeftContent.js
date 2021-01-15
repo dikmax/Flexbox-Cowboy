@@ -47,18 +47,18 @@ class LeftContent extends React.Component{
     </div>
     <div className="editor">
 
-      <pre id="befor"> Odin</pre>
+      <pre id="befor"> {this.props.map[2][0]}</pre>
       <textarea  id="code"
                  defaultValue="поле ввода"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
-      <pre id="after">Viva Loviva</pre>
+      <pre id="after">Закрывающая скобка</pre>
     </div>
     <div className="content-left-button">
       <button type="button"
               onClick = {this.testLeft}
               className ="btn  btn-secondary">   
-            'Дорогу осилит идущий' </button>
+              'Дорогу осилит идущий'</button>
     </div>
   </div>
   )}};
