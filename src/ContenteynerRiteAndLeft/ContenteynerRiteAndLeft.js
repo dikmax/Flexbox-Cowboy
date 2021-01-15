@@ -34,12 +34,13 @@ class ContenteynerRiteAndLeft extends React.Component{
     })
     };
      
+
       
   render(){
     console.log(this.state)
     return (
       <>
-        <LeftContent map ={this.state.flexMoving}
+        <LeftContent keyAndValue ={this.state.flexMoving}
         setUserText = {this.setUserText}/>
         <RiteContent
          newItem ={this.newItem}

@@ -11,9 +11,12 @@ class LeftContent extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      test: ''
+      test: '',
+      keyAndValue: '',
     };
   };
+
+ 
 
   testLeft = () =>{
     this.props.setUserText(this.state.test)
@@ -24,15 +27,17 @@ class LeftContent extends React.Component{
     this.setState({
       test: e.target.value
     });
-    console.log(`слева ${this.state}`)
+    console.log('ok')
   };
+
+
  
   render(){  
 
-  const leftLi = this.props.map[1][1].map(function(item) {
+  const leftLi = this.props.keyAndValue[1][1].map(function(item) {
     return(<li>{item}</li>)
   });
-  const leftPre = this.props.map.display;
+  
   
   return (
   <div className="content-left" >
@@ -45,7 +50,7 @@ class LeftContent extends React.Component{
       </div>
     </div>
 
-    <div className="left-task"><p>{this.props.map[0][1]}</p></div>
+    <div className="left-task"><p>{this.props.keyAndValue[0][1]}</p></div>
     <div>
       <ul>
       {leftLi}
@@ -53,7 +58,7 @@ class LeftContent extends React.Component{
     </div>
     <div className="editor">
 
-      <pre id="befor"> {leftPre}</pre>
+      <pre id="befor"> начало</pre>
       <textarea  id="code"
                  defaultValue="поле ввода"
                  onChange={this.flexChange}
