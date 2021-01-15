@@ -23,10 +23,18 @@ class ContenteynerRiteAndLeft extends React.Component{
      },
     ])
       }};
-    setUserText = (value) =>{
-     this.setState({flexMoving: this.state.push(value)})
-     console.log(this.state.flexMoving)
-    }
+
+       
+    setUserText = (justifyContent) =>{
+    this.setState(({flexMoving})=>{
+    
+      const oldItem = flexMoving[2];
+      const newItem = {...oldItem, justifyContent}
+      console.log(newItem)
+      
+
+    })
+    };
      
       
   render(){
@@ -36,7 +44,7 @@ class ContenteynerRiteAndLeft extends React.Component{
         setUserText = {this.setUserText}/>
         <RiteContent
          
-         map ={this.state.flexMoving}/>
+         map ={this.state}/>
       </>
     );
   } };

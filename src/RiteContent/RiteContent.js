@@ -20,9 +20,9 @@ render(){
   const array = '';
   return (
     <div className="content-rite">
-      <div style={this.props.map[2]}className="img-bad-cowboy">
+      <div style={this.props}className="img-bad-cowboy">
         <img src={Cowboy} alt="тут могла быть ваша реклама"></img>
-        <button  onClick = {()=>console.log(this.props.map[2])} >TEST</button>
+        <button  onClick = {()=>console.log(this.props)} >TEST</button>
      </div>
     </div>
     );
