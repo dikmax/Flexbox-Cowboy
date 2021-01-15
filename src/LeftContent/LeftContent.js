@@ -16,7 +16,8 @@ class LeftContent extends React.Component{
   };
 
   testLeft = () =>{
-    console.log(this.props.map[2][0])
+  
+ 
   };
 
 
