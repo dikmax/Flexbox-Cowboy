@@ -24,7 +24,7 @@ class LeftContent extends React.Component{
     this.setState({
       test: e.target.value
     });
-    console.log(this.state)
+    console.log(`слева ${this.state}`)
   };
  
   render(){  
