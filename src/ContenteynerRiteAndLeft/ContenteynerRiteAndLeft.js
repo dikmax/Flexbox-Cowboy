@@ -28,9 +28,9 @@ class ContenteynerRiteAndLeft extends React.Component{
     setUserText = (value) =>{
     this.setState(({flexMoving})=>{
       const oldItem = flexMoving[2];
-      const newItem = {...oldItem, value};
-      console.log(newItem);
-      return newItem;
+      flexMoving[2]= {...oldItem, value};
+      console.log(flexMoving);
+      return flexMoving
     })
     };
      
