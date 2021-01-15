@@ -27,6 +27,7 @@ class LeftContent extends React.Component{
   const leftLi = this.props.map[1][1].map(function(item) {
     return(<li>{item}</li>)
   });
+  const leftPre = this.props.map.display;
   
   return (
   <div className="content-left" >
@@ -47,7 +48,7 @@ class LeftContent extends React.Component{
     </div>
     <div className="editor">
 
-      <pre id="befor"> {this.props.map[2][0]}</pre>
+      <pre id="befor"> {leftPre}</pre>
       <textarea  id="code"
                  defaultValue="поле ввода"
                  onChange={this.flexChange}
