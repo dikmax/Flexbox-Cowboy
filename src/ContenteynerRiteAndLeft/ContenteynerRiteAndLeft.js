@@ -19,16 +19,16 @@ class ContenteynerRiteAndLeft extends React.Component{
            ['space-around Элементы отображаются с одинаковыми отступами вокруг них.'],
           ]],
      { display: 'flex',
-       justifyContent: 'center',
+       
      },
     ])
       }};
 
        
-    setUserText = (value) =>{
+    setUserText = (justifyContent) =>{
     this.setState(({flexMoving})=>{
       const oldItem = flexMoving[2];
-      flexMoving[2]= {...oldItem, value};
+      flexMoving[2]= {...oldItem, justifyContent};
       console.log(flexMoving);
       return flexMoving
     })
@@ -43,7 +43,7 @@ class ContenteynerRiteAndLeft extends React.Component{
         setUserText = {this.setUserText}/>
         <RiteContent
          newItem ={this.newItem}
-         map ={this.state}/>
+         inlaynStyle ={this.state.flexMoving[2]}/>
       </>
     );
   } };

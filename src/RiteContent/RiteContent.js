@@ -20,9 +20,9 @@ render(){
   const array = '';
   return (
     <div className="content-rite">
-      <div style={this.props}className="img-bad-cowboy">
+      <div style={this.props.inlaynStyle}className="img-bad-cowboy">
         <img src={Cowboy} alt="тут могла быть ваша реклама"></img>
-        <button  onClick = {()=>console.log(this.props)} >TEST</button>
+        <button  onClick = {()=>console.log(this.props.inlaynStyle)} >TEST</button>
      </div>
     </div>
     );
