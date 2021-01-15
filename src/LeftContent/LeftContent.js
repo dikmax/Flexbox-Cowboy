@@ -11,18 +11,22 @@ class LeftContent extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      test: 'left'
+      test: ''
     };
   };
 
   testLeft = () =>{
-  
- 
+    this.props.setUserText(this.state.test)
   };
 
 
-
-
+  flexChange=(e)=>{
+    this.setState({
+      test: e.target.value
+    });
+    console.log(this.state)
+  };
+ 
   render(){  
 
   const leftLi = this.props.map[1][1].map(function(item) {
