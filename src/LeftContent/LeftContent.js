@@ -4,9 +4,6 @@ import App from '../App/App'
 import './LeftContent.css';
 import 'bootswatch/dist/sketchy/bootstrap.min.css';
 
-
-
-
 class LeftContent extends React.Component{
   constructor(props){
     super(props);
@@ -16,12 +13,9 @@ class LeftContent extends React.Component{
     };
   };
 
- 
-
   testLeft = () =>{
     this.props.setUserText(this.state.test)
   };
-
 
   flexChange=(e)=>{
     this.setState({
@@ -29,16 +23,16 @@ class LeftContent extends React.Component{
     });
     console.log('ok')
   };
-
-
  
-  render(){  
-
+render(){  
   const leftLi = this.props.keyAndValue[1][1].map(function(item) {
     return(<li>{item}</li>)
   });
   
-  
+  const befor = Object.keys(this.props.keyAndValue[2]);
+  const after = this.props.keyAndValue[2];
+
+
   return (
   <div className="content-left" >
 
@@ -58,9 +52,9 @@ class LeftContent extends React.Component{
     </div>
     <div className="editor">
 
-      <pre id="befor"> начало</pre>
+      <pre id="befor">{befor[0]}</pre>
       <textarea  id="code"
-                 defaultValue="поле ввода"
+                 defaultValue="flex-end"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
       <pre id="after">Закрывающая скобка</pre>

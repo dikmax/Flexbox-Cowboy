@@ -29,7 +29,7 @@ class ContenteynerRiteAndLeft extends React.Component{
     this.setState(({flexMoving})=>{
       const oldItem = flexMoving[2];
       flexMoving[2]= {...oldItem, justifyContent};
-      console.log(flexMoving);
+      console.log(Object.keys(flexMoving[2]));
       return flexMoving
     })
     };
