@@ -17,9 +17,12 @@ class  Questions extends React.Component{
 
      testing = ()=>{
        const oldArray = this.props.tes[2].userText
-       const newArray = oldArray.split(':')
+       const newArray = oldArray.split(':');
+       const obgUser = newArray[0]
+       const strUser = newArray.slice(1);
        
-       console.log(newArray)
+       
+       console.log(strUser);
      };
   
    
