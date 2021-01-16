@@ -15,6 +15,10 @@ class LeftContent extends React.Component{
 
   testLeft = () =>{
     this.props.setUserText(this.state.test)
+     let q = this.state.test
+    const a = {q};
+    console.log(a)
+    console.log(this.state.test)
   };
 
   flexChange=(e)=>{

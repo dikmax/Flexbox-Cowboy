@@ -14,7 +14,13 @@ class RiteContent extends React.Component{
      justifyContent: 'center',
     }};  
 };
- 
+
+ testing =()=>{
+   const qwe = [{qwe:'ewq'},{justifyContent: 'flex-end'}];
+   
+   console.log(qwe)
+  console.log(this.props.inlaynStyle)
+ }
 
 render(){
   const array = '';
@@ -22,7 +28,7 @@ render(){
     <div className="content-rite">
       <div style={this.props.inlaynStyle}className="img-bad-cowboy">
         <img src={Cowboy} alt="тут могла быть ваша реклама"></img>
-        <button  onClick = {()=>console.log(this.props.inlaynStyle)} >TEST</button>
+        <button  onClick = {this.testing} >TEST</button>
      </div>
     </div>
     );
