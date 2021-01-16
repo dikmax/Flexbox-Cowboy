@@ -9,19 +9,32 @@ class  Questions extends React.Component{
     }};
 
 
+
+
+
+
   
 
      testing = ()=>{
-       console.log(this.props)
-     }
+       const oldArray = this.props.tes[2].userText
+       const newArray = oldArray.split(':')
+       
+       console.log(newArray)
+     };
   
    
+
+
+
+
+
+
 
     
 render(){
   return (
     <>
-      <button style={{color: 'red'}} onClick={this.testing}>TESTING</button>
+      <button  onClick={this.testing}>TESTING</button>
     </>
   );
 } };

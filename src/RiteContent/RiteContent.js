@@ -16,9 +16,9 @@ class RiteContent extends React.Component{
 };
 
  testing =()=>{
-   const qwe = [{qwe:'ewq'},{justifyContent: 'flex-end'}];
+ 
    
-   console.log(qwe)
+  
   console.log(this.props.inlaynStyle)
  }
 
@@ -26,7 +26,7 @@ render(){
   const array = '';
   return (
     <div className="content-rite">
-      <div style={this.props.inlaynStyle}className="img-bad-cowboy">
+      <div className="img-bad-cowboy">
         <img src={Cowboy} alt="тут могла быть ваша реклама"></img>
         <button  onClick = {this.testing} >TEST</button>
      </div>

@@ -15,17 +15,15 @@ class LeftContent extends React.Component{
 
   testLeft = () =>{
     this.props.setUserText(this.state.test)
-     let q = this.state.test
-    const a = {q};
+     let estLeftState = this.state.test
+    const a = {estLeftState};
     console.log(a)
-    console.log(this.state.test)
   };
 
   flexChange=(e)=>{
     this.setState({
       test: e.target.value
     });
-    console.log('ok')
   };
  
 render(){  
@@ -58,7 +56,7 @@ render(){
 
       <pre id="befor">{befor[0]}</pre>
       <textarea  id="code"
-                 defaultValue="color: red"
+                 defaultValue="color: re"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
       <pre id="after">Закрывающая скобка</pre>
