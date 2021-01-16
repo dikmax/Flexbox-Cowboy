@@ -24,7 +24,7 @@ class  Questions extends React.Component{
        const knufArray = newArray.slice(1);
        const txtArray = knufArray.join(' ');
       
-       console.log({obgArray: txtArray});
+       console.log(arra);
      };
   
    
