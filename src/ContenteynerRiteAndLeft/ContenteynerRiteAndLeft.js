@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './ContenteynerRiteAndLeft.css';
 import RiteContent from '../RiteContent/RiteContent';
 import LeftContent from '../LeftContent/LeftContent';
-
+import Questions from "../Questions/Questions";
 
 class ContenteynerRiteAndLeft extends React.Component{
     constructor(props){
@@ -40,6 +40,7 @@ class ContenteynerRiteAndLeft extends React.Component{
     console.log(this.state)
     return (
       <>
+                        <Questions/>
         <LeftContent keyAndValue ={this.state.flexMoving}
         setUserText = {this.setUserText}/>
         <RiteContent
