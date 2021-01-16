@@ -5,7 +5,7 @@ class  Questions extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-       answer:  ['']
+       answer: null
     }};
 
 
@@ -16,13 +16,15 @@ class  Questions extends React.Component{
   
 
      testing = ()=>{
+
+
        const oldArray = this.props.tes[2].userText
        const newArray = oldArray.split(':');
-       const obgUser = newArray[0]
-       const strUser = newArray.slice(1);
-       
-       
-       console.log(strUser);
+       let obgArray = newArray[0];
+       const knufArray = newArray.slice(1);
+       const txtArray = knufArray.join(' ');
+      
+       console.log({obgArray: txtArray});
      };
   
    
