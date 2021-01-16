@@ -1,32 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Questions() {
-const lr =  ([ { display: 'flex'} ])
+class  Questions extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+       answer:  ['']
+    }};
 
 
+  
+
+     testing = ()=>{
+       console.log(this.props)
+     }
+  
+   
+
+    
+render(){
+  return (
+    <>
+      <button style={{color: 'red'}} onClick={this.testing}>TESTING</button>
+    </>
+  );
+} };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  console.log('Questions work')
-  return <button onClick={Questions}>Aswer the Questions </button>
-}
 
 
 

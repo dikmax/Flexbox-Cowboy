@@ -58,7 +58,7 @@ render(){
 
       <pre id="befor">{befor[0]}</pre>
       <textarea  id="code"
-                 defaultValue="flex-end"
+                 defaultValue="color: red"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
       <pre id="after">Закрывающая скобка</pre>

@@ -37,10 +37,9 @@ class ContenteynerRiteAndLeft extends React.Component{
 
       
   render(){
-    console.log(this.state)
     return (
       <>
-                        <Questions/>
+                        <Questions prop ={this.state}/>
         <LeftContent keyAndValue ={this.state.flexMoving}
         setUserText = {this.setUserText}/>
         <RiteContent
