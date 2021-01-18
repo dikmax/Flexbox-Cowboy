@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from '../App/App'
 import './LeftContent.css';
 import 'bootswatch/dist/sketchy/bootstrap.min.css';
 
@@ -36,35 +34,35 @@ render(){
 
 
   return (
-  <div className="content-left" >
+  <div className='content-left' >
 
-    <div>
-      <div><p>Сменить уровень</p></div>
+    <div className = 'LeftContent-level'>
+      <div className ='LeftContent-level-text' ><p>Сменить уровень</p></div>
        <div>
-        <button>Назад</button>
-        <button>Вперед</button>
+        <button className = 'LeftContent-level-down'>Назад</button>
+        <button className = 'LeftContent-level-up'>Вперед</button>
       </div>
     </div>
 
-    <div className="left-task"><p>{this.props.keyAndValue[0][1]}</p></div>
+    <div className='left-task'><p>{this.props.keyAndValue[0][1]}</p></div>
     <div>
       <ul>
       {leftLi}
       </ul>
     </div>
-    <div className="editor">
+    <div className='editor'>
 
-      <pre id="befor">{befor[0]}</pre>
-      <textarea  id="code"
-                 defaultValue="color: re"
+      <pre id='befor'>{befor[0]}</pre>
+      <textarea  id='code'
+                 defaultValue='color: re'
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
-      <pre id="after">Закрывающая скобка</pre>
+      <pre id='after'>Закрывающая скобка</pre>
     </div>
-    <div className="content-left-button">
-      <button type="button"
+    <div className='content-left-button'>
+      <button type='button'
               onClick = {this.testLeft}
-              className ="btn  btn-secondary">   
+              className ='btn  btn-secondary'>   
               'Дорогу осилит идущий'</button>
     </div>
   </div>

@@ -22,9 +22,9 @@ class  Questions extends React.Component{
        const newArray = oldArray.split(':');
        let obgArray = newArray[0];
        const knufArray = newArray.slice(1);
-       const txtArray = knufArray.join(' ');
-      
-       console.log(arra);
+       
+ 
+       console.log('as');
      };
   
    
