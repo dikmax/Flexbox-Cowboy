@@ -1,6 +1,5 @@
 import React from 'react';
-import './LeftContent.css';
-import 'bootswatch/dist/sketchy/bootstrap.min.css';
+import './LeftContent.css'
 
 class LeftContent extends React.Component{
   constructor(props){
@@ -38,31 +37,31 @@ render(){
 
     <div className = 'LeftContent-level'>
       <div className ='LeftContent-level-text' ><p>Сменить уровень</p></div>
-       <div>
+       <div className ="LeftContent-level-btn" >
         <button className = 'LeftContent-level-down'>Назад</button>
         <button className = 'LeftContent-level-up'>Вперед</button>
       </div>
     </div>
 
-    <div className='left-task'><p>{this.props.keyAndValue[0][1]}</p></div>
+    <div className ='LeftContent-task'><p>{this.props.keyAndValue[0][1]}</p></div>
     <div>
       <ul>
       {leftLi}
       </ul>
     </div>
-    <div className='editor'>
+    <div className ='LeftContent-editor'>
 
       <pre id='befor'>{befor[0]}</pre>
-      <textarea  id='code'
+      <textarea className = "LeftContent-textarea" id='code'
                  defaultValue='color: re'
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
       <pre id='after'>Закрывающая скобка</pre>
     </div>
-    <div className='content-left-button'>
+    <div className ='LeftContent-buttonStart'>
       <button type='button'
               onClick = {this.testLeft}
-              className ='btn  btn-secondary'>   
+              className ='LeftContent-buttonStart-button'>   
               'Дорогу осилит идущий'</button>
     </div>
   </div>

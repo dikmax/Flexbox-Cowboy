@@ -1,13 +1,33 @@
-.content_left{ 
-    background-color: rgba(210, 105, 30, 0.315);
-  
-    flex-basis:29.7%;
-   
-};
-.content_left_button{
-    display: flex;
-    justify-content: end;
+.content-left{
+    
 }
-.left-task{
-    padding-top: 5px;
+.LeftContent-level{
+
+}
+.LeftContent-level-text{
+
+}
+.LeftContent-level-btn{
+
+}
+.LeftContent-level-down{
+
+}
+.LeftContent-level-up{
+
+}
+.LeftContent-task{
+
+}
+.LeftContent-editor{
+
+}
+.LeftContent-textarea{
+
+}
+.LeftContent-buttonStart{
+
+}
+.LeftContent-buttonStart-button{
+    
 }

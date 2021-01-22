@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
-import 'bootswatch/dist/sketchy/bootstrap.min.css';
+
 
 
 ReactDOM.render(
