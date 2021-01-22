@@ -26,12 +26,7 @@ class ContenteynerRiteAndLeft extends React.Component{
 
        
     setUserText = (userText) =>{
-    this.setState(({flexMoving})=>{
-      const oldItem = flexMoving[2];
-      flexMoving[2]= {...oldItem, userText};
-      console.log(Object.keys(flexMoving[2]));
-      return flexMoving
-    })
+ console.log(`RaL выводит ${userText}`)
     };
      
 
@@ -39,7 +34,6 @@ class ContenteynerRiteAndLeft extends React.Component{
   render(){
     return (
       <>
-                        <Questions tes ={this.state.flexMoving}/>
         <LeftContent keyAndValue ={this.state.flexMoving}
         setUserText = {this.setUserText}/>
         <RiteContent
