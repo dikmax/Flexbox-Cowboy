@@ -27,7 +27,7 @@ render(){
   return (
     <div className="content-rite">
       <div className="img-bad-cowboy">
-        <img src={Cowboy} alt="тут могла быть ваша реклама"></img>
+        <img src={''} alt="тут могла быть ваша реклама"></img>
         <button  onClick = {this.testing} >TEST</button>
      </div>
     </div>
