@@ -1,21 +1,17 @@
-
-.header{
-    background-color: rgba(222, 184, 135, 0.541);
+.header {
+  background-color: #666666;
+  display: flex;
 }
-.header_navigation{
-    display: flex;
-    justify-content: space-around;
+.logo {
+  margin: 0 auto;
+  flex-basis: 50%;
 }
-.header_navigation_logo{
- color: brown;
- padding-right: 50%;
-
+.header__conteyner-flex {
+    font-size: 24px;
+    color: #ffffff;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-around;
 }
-.header_navigation_menu{
-padding-top: 0.5rem;
-}
-
-.header_navigation_menu :hover{
-   opacity: 80%;
-   padding-top: 1px;
+.header__item {
 }

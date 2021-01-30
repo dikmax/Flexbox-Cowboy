@@ -1,6 +1,7 @@
 .content-rite{
     background: url('../Source/jpeg/desert.png') repeat-x rgba(86, 116, 116, 0.212);
-    flex-basis:69.7%;
-   
+    flex-basis:60%;
+    margin: 0;
+    background-position: top;
 };
 
