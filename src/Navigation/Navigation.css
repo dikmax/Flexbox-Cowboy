@@ -3,12 +3,17 @@
   display: flex;
 }
 .logo {
+    max-height:min-content;
+  padding-left: 3%;
+  color: #ffffff;
+  font-size: 23px;
+  font-family: fantasy;
   margin: 0 auto;
   flex-basis: 50%;
 }
 .header__conteyner-flex {
-    font-size: 24px;
-    color: #ffffff;
+  font-size: 24px;
+  color: #ffffff;
   flex-basis: 50%;
   display: flex;
   justify-content: space-around;

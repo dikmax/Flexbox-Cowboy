@@ -15,17 +15,13 @@ class RiteContent extends React.Component{
     }};  
 };
 
- //testing =()=>{ console.log(this.props.inlaynStyle) }  // <button  onClick = {this.testing} >TEST</button>
-
  
 
 render(){
   const array = '';
   return (
-    <div className="content-rite">
-      <div className="img-bad-cowboy">
-        <img src={Cowboy} alt="тут могла быть ваша реклама"></img>
-     </div>
+    <div className="block__conteiner user">
+      <div className="block__svg"></div>
     </div>
     );
 } };
