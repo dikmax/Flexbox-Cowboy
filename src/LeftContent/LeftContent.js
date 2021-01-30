@@ -1,3 +1,4 @@
+import { getDefaultNormalizer } from '@testing-library/react';
 import React from 'react';
 import './LeftContent.css'
 
@@ -5,19 +6,35 @@ class LeftContent extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      test: '',
-      keyAndValue: '',
+      test: null
+      
     };
   };
+   
+ 
+  testLeft = (value) => {
+    value = this.state.test
+    if(typeof String.prototype.trim !== 'function') {
+      String.prototype.trim = function() {
+        return this.replace(/^\s+|\s+$/g, ''); 
+      }
+    }
 
-  testLeft = () =>{
-    this.props.setUserText(this.state.test)
-     let estLeftState = this.state.test
-    const a = {estLeftState};
-    console.log(a)
+    let s =  value;
+    let arr = s.substring(0,s.length).trim().split(':');
+    let obj = {};
+    obj[arr[0]]=arr[1];
+
+    console.log(obj);
   };
+  //  testLeft = () =>{
+  //  this.props.setUserText(this.state.test)
+  //    let estLeftState = this.state.test
+  //    const a = {estLeftState};
+  //    console.log(a)
+  //  };
 
-  flexChange=(e)=>{
+  flexChange = (e)=>{
     this.setState({
       test: e.target.value
     });
