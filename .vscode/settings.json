@@ -1,3 +1,5 @@
 {
-    "ecsstractor_port.bem_nesting": true
+    "ecsstractor_port.bem_nesting": true,
+    "ecsstractor_port.comment_style": "css",
+    "ecsstractor_port.attributes": "className"
 }

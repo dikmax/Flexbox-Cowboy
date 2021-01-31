@@ -12,10 +12,11 @@ class Content extends React.Component {
       data: ['left', 'rite']
     }
   };
+  
 
   render() {
     return (
-      <div>
+      <div className="content-flex">
         <Text />
         <Display />
       </div>

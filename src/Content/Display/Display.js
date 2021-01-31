@@ -14,8 +14,8 @@ class Display extends React.Component{
 
 render(){
   return (
-    <div>
-     <p>{this.state.data}</p>
+    <div className="display-conteiner  move">
+     <div className="display-item"></div>
     </div>
   );
 } };
