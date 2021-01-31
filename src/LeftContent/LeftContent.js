@@ -24,7 +24,7 @@ class LeftContent extends React.Component{
     let arr = s.substring(0,s.length).trim().split(':');
     let obj = {};
     obj[arr[0]]=arr[1];
-
+     
     console.log(obj);
   };
   //  testLeft = () =>{
