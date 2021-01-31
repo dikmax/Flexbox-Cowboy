@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
+import Content from '../Content/Content '
 
 class App extends React.Component{
   constructor(props){
@@ -11,13 +12,12 @@ class App extends React.Component{
     editBtnValue: ['good','ffod']
   }};
 
-
-
 render(){
   return (
     <div>
       <Navigation/>
-     <p>Go</p>
+      <Content/>
+    <Footer/>
     </div>
   );
 } };
