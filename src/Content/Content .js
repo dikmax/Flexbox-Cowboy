@@ -1,24 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../Content/Content.css'
-import Display from '../Content/Display/Display'
+import '../Content/Content.css';
+import Display from '../Content/Display/Display';
+import Text from '../Content/Text/Text'
 
 
-class Content extends React.Component{
-  constructor(props){
+class Content extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
-    data: ['left','rite']
-  }};
+      data: ['left', 'rite']
+    }
+  };
 
-render(){
-  return (
-    <div>
-     <p>{this.state.data}</p>
-     <Display/>
-    </div>
-  );
-} };
+  render() {
+    return (
+      <div>
+        <Text />
+        <Display />
+      </div>
+    );
+  }
+};
 
 export default Content;
 
