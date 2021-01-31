@@ -11,8 +11,9 @@
   align-items: center;
 }
 .button__text {
+  color: #666666;
   font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family:fantasy;
 }
 .batton-item {
   display: flex;

@@ -12,12 +12,13 @@ class Pre extends React.Component {
             data: 'Text'
         }
     };
-
+ 
     render() {
         return (
             <div className="exit-conteiner">
                 <p  className="exit--befor"> Текст до &#9829; </p>
-                <textarea className="exit__input" defaultValue="Поле ввода"
+                <textarea className="exit__input" placeholder
+="Поле ввода" rows="3"
                 ></textarea>
                 <p className="exit--after">&#9829;</p>
             </div>)

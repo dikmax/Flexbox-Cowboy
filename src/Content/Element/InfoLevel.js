@@ -12,7 +12,7 @@ class InfoLevel extends React.Component {
             data: 'Text'
         }
     };
- 
+  
     render() {
         return (
             <div className="level">
