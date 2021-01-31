@@ -33,3 +33,7 @@ min-width: 105px;
     margin-left: 1em;
     transition: all 500ms ease 0s;
   }
+  .start__button::before{
+      content: 'er';
+      opacity: 0;
+  }
