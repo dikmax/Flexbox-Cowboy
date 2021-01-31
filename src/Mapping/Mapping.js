@@ -5,7 +5,8 @@ import Cowboy from '../Source/jpeg/cowboy.png'
  
 
 const test = <img src={Cowboy} alt="Нет ковбоя"></img>;
-class RiteContent extends React.Component{
+
+class Mapping extends React.Component{
   constructor(props){
     super(props);
     this.state = {

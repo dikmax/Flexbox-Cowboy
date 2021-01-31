@@ -56,7 +56,7 @@ render(){
       </div>
     </div>
 
-    <div className ='content-task'><p>{this.props.keyAndValue[0][1]}</p></div>
+    <div ><p>lorem</p></div>
     <div>
       <ul>
       {leftLi}
@@ -64,14 +64,14 @@ render(){
     </div>
     <div className ='content-editor'>
 
-      <pre id='befor'>{befor[0]}</pre>
+      <pre>pre</pre>
       <textarea className = "content-textarea" id='code'
                  defaultValue="justify-content: space-between"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
-      <pre id='after'>Закрывающая скобка</pre>
+      <pre>Закрывающая скобка</pre>
     </div>
-    <div className ='content-buttonStart'>
+    <div>
       <button type='button'
               onClick = {this.testLeft}
               className ='content-buttonStart-button'>   

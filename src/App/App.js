@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
-import ContentWrapper  from '../Wrapper/WrapperConten'
+
 class App extends React.Component{
   constructor(props){
     super(props);
