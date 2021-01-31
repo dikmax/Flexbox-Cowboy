@@ -1,4 +1,5 @@
 .text-conteiner{
     flex-basis: 40%;
+    background-color: rgba(239, 240, 241, 0.603);
     color: #343434;
 }
