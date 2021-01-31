@@ -14,15 +14,12 @@ class LeftContent extends React.Component{
  
   testLeft = (value) => {
     value = this.state.test
-    if(typeof String.prototype.trim !== 'function') {
-      String.prototype.trim = function() {
-        return this.replace(/^\s+|\s+$/g, ''); 
-      }
-    }
+ 
 
     let s =  value;
     let arr = s.substring(0,s.length).trim().split(':');
     let obj = {};
+    
     obj[arr[0]]=arr[1];
      
     console.log(obj);
@@ -70,7 +67,7 @@ render(){
 
       <pre id='befor'>{befor[0]}</pre>
       <textarea className = "LeftContent-textarea" id='code'
-                 defaultValue='color: re'
+                 defaultValue="justify-content: space-between"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
       <pre id='after'>Закрывающая скобка</pre>
