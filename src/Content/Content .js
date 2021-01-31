@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../Content/Content.css'
-
-
+import Display from '../Content/Display/Display'
 
 
 class Content extends React.Component{
@@ -16,6 +15,7 @@ render(){
   return (
     <div>
      <p>{this.state.data}</p>
+     <Display/>
     </div>
   );
 } };
