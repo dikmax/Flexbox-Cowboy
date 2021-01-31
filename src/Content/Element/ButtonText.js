@@ -12,7 +12,7 @@ class ButtonText extends React.Component {
             data: 'Text'
         }
     };
-
+ 
     render() {
         return (
             <div className="text-button__conteiner">
