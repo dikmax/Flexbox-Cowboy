@@ -11,7 +11,7 @@ class StartButton extends React.Component {
         this.state = {
             data: 'Text'
         }
-    };
+    }; 
 
     render() {
         return (
