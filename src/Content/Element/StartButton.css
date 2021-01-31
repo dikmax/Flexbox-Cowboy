@@ -6,6 +6,10 @@
 margin-top: -50px;
 }
 .start__button{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
 font-family: fantasy;
 font-size: 24px;
 border-radius: 4px;
@@ -15,3 +19,17 @@ letter-spacing: 2px;
 min-height: 45px;
 min-width: 105px;
 }
+.start__button:after {
+    content:url('/src/Source/svg/handcuffs.svg');
+    display: inline-block;
+    margin-right: -10px;
+    opacity: 0;
+    transition: all 2s ease 0s;
+  }
+  .start__button:hover:after {
+    opacity: 1;
+    display: inline-block;
+    margin-right: 0;
+    margin-left: 1em;
+    transition: all 500ms ease 0s;
+  }
