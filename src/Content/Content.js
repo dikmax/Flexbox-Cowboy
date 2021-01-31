@@ -1,13 +1,12 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React from 'react';
-import './LeftContent.css'
+import './Content.css'
 
-class LeftContent extends React.Component{
+class Content extends React.Component{
   constructor(props){
     super(props);
     this.state = {
       test: null
-      
     };
   };
    
@@ -47,39 +46,39 @@ render(){
 
 
   return (
-  <div className='content-left' >
+  <div className='content' >
 
-    <div className = 'LeftContent-level'>
-      <div className ='LeftContent-level-text' ><p>Сменить уровень</p></div>
-       <div className ="LeftContent-level-btn" >
-        <button className = 'LeftContent-level-down'>Назад</button>
-        <button className = 'LeftContent-level-up'>Вперед</button>
+    <div className = 'content'>
+      <div className ='content-level-text' ><p>Сменить уровень</p></div>
+       <div className ="content-level-btn" >
+        <button className = 'content-level-down'>Назад</button>
+        <button className = 'content-level-up'>Вперед</button>
       </div>
     </div>
 
-    <div className ='LeftContent-task'><p>{this.props.keyAndValue[0][1]}</p></div>
+    <div className ='content-task'><p>{this.props.keyAndValue[0][1]}</p></div>
     <div>
       <ul>
       {leftLi}
       </ul>
     </div>
-    <div className ='LeftContent-editor'>
+    <div className ='content-editor'>
 
       <pre id='befor'>{befor[0]}</pre>
-      <textarea className = "LeftContent-textarea" id='code'
+      <textarea className = "content-textarea" id='code'
                  defaultValue="justify-content: space-between"
                  onChange={this.flexChange}
                  onSubmit={this.onSubmit}></textarea>
       <pre id='after'>Закрывающая скобка</pre>
     </div>
-    <div className ='LeftContent-buttonStart'>
+    <div className ='content-buttonStart'>
       <button type='button'
               onClick = {this.testLeft}
-              className ='LeftContent-buttonStart-button'>   
+              className ='content-buttonStart-button'>   
               'Дорогу осилит идущий'</button>
     </div>
   </div>
   )}};
 
 
-export default LeftContent;
+export default Content;

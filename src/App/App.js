@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
-import ContenteynerRiteAndLeft  from '../ContenteynerRiteAndLeft/ContenteynerRiteAndLeft'
+import ContentWrapper  from '../Wrapper/WrapperConten'
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -17,10 +17,7 @@ render(){
   return (
     <div>
       <Navigation/>
-      <div className='content' >
-        <ContenteynerRiteAndLeft/>
-      </div>
-      <Footer/>
+     <p>Go</p>
     </div>
   );
 } };
