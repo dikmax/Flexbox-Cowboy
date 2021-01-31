@@ -16,11 +16,13 @@ class ButtonText extends React.Component {
     render() {
         return (
             <div className="text-button__conteiner">
+                <div className="text-flex">
                 <div className="button__text"><p>Уровень</p></div>
                 <div className="batton-item">
-                    <div className="button--1"><button type="button">перегруппироваться</button></div>
-                    <div className="button--2"><button type="button">вперед</button></div>
+                    <div ><button className="button--1" type="button">назад</button></div>
+                    <div ><button className="button--2" type="button">вперед</button></div>
                     <div ></div>
+                </div>
                 </div>
             </div>
         );
