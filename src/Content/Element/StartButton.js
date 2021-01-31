@@ -16,7 +16,7 @@ class StartButton extends React.Component {
     render() {
         return (
             <div className="start">
-                <button className="start__button"  type="button">Старт</button>             
+               <div className="start_conteiner"> <button className="start__button"  type="button">Старт</button></div>        
             </div>)
 
     }

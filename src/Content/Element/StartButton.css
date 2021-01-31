@@ -1,8 +1,17 @@
+.start{
+    display: flex;
+    justify-content: flex-end;
+}
+.start_conteiner{
+margin-top: -50px;
+}
 .start__button{
 font-family: fantasy;
 font-size: 24px;
 border-radius: 4px;
-    color: #fafafa;
+color: #fafafa;
 background-color: #666666;    
 letter-spacing: 2px;
+min-height: 45px;
+min-width: 105px;
 }
