@@ -15,11 +15,11 @@ class Pre extends React.Component {
 
     render() {
         return (
-            <div className="editor">
-                <pre id="befor"> Текст до &#9829; </pre>
-                <textarea id="code" defaultValue="Поле ввода"
+            <div className="exit-conteiner">
+                <p  className="exit--befor"> Текст до &#9829; </p>
+                <textarea className="exit__input" defaultValue="Поле ввода"
                 ></textarea>
-                <pre id="after">&#9829;</pre>
+                <p className="exit--after">&#9829;</p>
             </div>)
 
     }
