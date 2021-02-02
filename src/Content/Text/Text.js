@@ -51,30 +51,8 @@ class Text extends React.Component {
       ).join('')
 
     });
-   let obg =  result.map(function (item, index, array) {
-   item 
-     })
-  
-    //изменяю текст из стейта в подходящий для style jsx, передаю вверх готовый стиль
-    // let valueInpt = this.state.level[2].task.split(':')
-    // let key = valueInpt[0].split('-') .task.replace(/\s/g, '').split('');
-    //   .map(
-    //     (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
-    //   )
-    //   .join('');
-    // let value = valueInpt[1];
-    // const obj = {};
-    // obj[key] = value;
-    // this.props.dataStyle(obj);   forJSX
-
+   
     console.log(result)// this.state.level[2].task
-
-
-
-    
-
-
-
   }
 
 
