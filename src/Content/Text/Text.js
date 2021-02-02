@@ -37,25 +37,25 @@ class Text extends React.Component {
 
   test2 = () => {
 
-    let clone = this.state.level.slice(0)
-    const separation = clone[2].task//убираем лишнее
+    let clone = this.state.level.slice(0) // клонирую state
+    const separation = clone[2].task //убираем лишнии пробелы и ;
       .replace(/\s/g, '')
       .split(';')
       .filter(function (item) {
         return item !== "";
       });
 
-    const result = separation.map(function (item, index, array) {    
-      return  item.split('-').map(
+    const result = separation.map(function (item) { // убираем дефис и делаем заглавные буквы
+      return item.split('-').map(
         (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
       ).join('')
 
     });
-   const obj = result.map(function (item, index, array){
-     const newObj = {};
+    const obj = result.map(function (item) { // делаю подходящий для JSX формат.
+      const newObj = {};
       newObj[item.split(':')[0]] = item.split(':')[1]
-     return newObj;
-   })
+      return newObj;
+    })
     console.log(obj)
   }
 
