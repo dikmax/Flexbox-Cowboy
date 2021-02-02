@@ -17,7 +17,7 @@ class Text extends React.Component {
     this.state = {
       level1: ([ {introductory:'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"'},
       {taskDescription: 'надо то то'},
-      {task: {justifyContent: 'center;'}}]) 
+      {task: {justifyContent: 'flex-end'}}]) 
       };
     
 

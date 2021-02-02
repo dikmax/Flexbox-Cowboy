@@ -9,7 +9,7 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: { justifyContent: 'flex-end' }
+      data: { justifyContent: 'center' }
     }
   };
 
@@ -26,7 +26,7 @@ class Content extends React.Component {
     return (
       <div className="content-flex">
         <Text dataStyle={this.dataStyle}/>
-        <Display/>
+        <Display itemDisplay={this.state.data}/>
       </div>
     );
   }

@@ -14,7 +14,7 @@ class Display extends React.Component{
  
 render(){
   return (
-    <div className="display-conteiner  move">
+    <div className="display-conteiner " style={this.props.itemDisplay} >
      <div className="display-item"></div>
     </div>
   );
