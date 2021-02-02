@@ -11,6 +11,9 @@
     border-radius: 10px 10px 10px 10px;
 }
 .exit--befor{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 0;
 
 }
 .exit__input{
@@ -24,5 +27,8 @@
 
 }
 .exit--after{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0;
 
 }

@@ -24,18 +24,17 @@ class Text extends React.Component {
   };
 
 
-   test = (inpt) => { // меняем стейт из инпута
+   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.level1
     newDisplay[2].task = (inpt)
     this.setState({
       level1: newDisplay
     })
-    console.log(this.state.level1[2].task)
   }
 
 
   test2 = () => {
-     // изменяю текст из инпута в подходящий для style jsx, передаю вверх готовый стиль
+     // изменяю текст из стейта в подходящий для style jsx, передаю вверх готовый стиль
     let valueInpt = this.state.level1[2].task.split(':')
     let key = valueInpt[0].split('-') 
       .map(
