@@ -51,8 +51,12 @@ class Text extends React.Component {
       ).join('')
 
     });
-   
-    console.log(result)// this.state.level[2].task
+   const obj = result.map(function (item, index, array){
+     const newObj = {};
+      newObj[item.split(':')[0]] = item.split(':')[1]
+     return newObj;
+   })
+    console.log(obj)
   }
 
 
