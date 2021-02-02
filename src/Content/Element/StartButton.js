@@ -15,7 +15,7 @@ class StartButton extends React.Component {
                     <button
                         className="start__button"
                         type="button"
-                       onClick={this.props.test}
+                       onClick={this.props.test} 
                     >Старт</button></div>
             </div>)
 

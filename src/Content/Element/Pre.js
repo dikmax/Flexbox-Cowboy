@@ -11,7 +11,8 @@ class Pre extends React.Component {
             <div className="exit-conteiner">
                 <p  className="exit--befor"> Текст до &#9829; </p>
                 <textarea className="exit__input"
-                          placeholder="Поле ввода"
+                         // placeholder="Поле ввода"
+                         defaultValue="justify-content: center"
                           rows="3"
                           onChange={(e)=>{this.props.test(e.target.value)}}
                 ></textarea>

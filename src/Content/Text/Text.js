@@ -15,23 +15,36 @@ class Text extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null
-    }
+      level1: ([ {introductory:'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"'},
+      {taskDescription: 'надо то то'},
+      {task: {display: 'flex;'}}])
+
+
+      };
+    
+
   };
 
 
-  test = (inpt) => {
-    // вывожу от пользователя и передаю в state
-   
-   this.setState({ data: inpt })
-    
-    // измеить текст
-    // передать в стейт
-    // из стейта в стили
+  // test = (inpt) => {
+  //   // вывожу от пользователя и передаю в state
+  //   this.setState({ level1: inpt })
+  // }
 
-  }
-  test2 = () =>{
-    console.log(this.state.data)
+
+  test2 = () => {
+    // // изменяю текс из инпута в подходящий для style jsx
+    // let valueInpt = this.state.level1.split(':')
+    // let key = valueInpt[0].split('-') 
+    //   .map(
+    //     (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+    //   )
+    //   .join('') 
+    // let value = valueInpt[1]
+    // const obg={};
+    // obg[key] = value;
+    // console.log(this.state.level1.introductory)
+    console.log(this.state.level1[0].introductory)
   }
 
 
@@ -42,7 +55,7 @@ class Text extends React.Component {
         <ButtonText />
         <InfoLevel />
         <Pre test={this.test} />
-        <StartButton test ={this.test2}/>
+        <StartButton test={this.test2} />
       </div>
     );
   }
