@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 import '../Content/Content.css';
 import Display from '../Content/Display/Display';
 import Text from '../Content/Text/Text'
