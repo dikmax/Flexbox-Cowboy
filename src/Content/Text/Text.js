@@ -16,8 +16,10 @@ class Text extends React.Component {
     super(props);
     this.state = {
       level1: ([ {introductory:'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"'},
-      {taskDescription: 'надо то то'},
-      {task: {justifyContent: 'flex-end'}}]) 
+      {taskDescription: 'Помести преступника в клетку'},
+      {task: {justifyContent: 'flex-end'}},
+      {infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси'],['justify-content: centr; ~ располагает елемент в центре блока']] }
+    ]) 
       };
     
 
@@ -44,9 +46,8 @@ class Text extends React.Component {
     let value = valueInpt[1]
     const obj={};
     obj[key] = value;
- 
   this.props.dataStyle(obj)
-    
+    console.log(this.state.level1[3].infoElement)
   }
 
 
@@ -56,7 +57,7 @@ class Text extends React.Component {
       <div className="text-conteiner">
         <HeaderText introductory = {this.state.level1[0].introductory}/>
         <ButtonText />
-        <InfoLevel />
+        <InfoLevel infoElement={this.state.level1[3].infoElement}  taskDescription={this.state.level1[1].taskDescription}/>
         <Pre test={this.test}   />
         <StartButton test={this.test2} />
       </div>

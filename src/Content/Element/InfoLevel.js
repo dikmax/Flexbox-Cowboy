@@ -12,16 +12,20 @@ class InfoLevel extends React.Component {
             data: 'Text'
         }
     };
-  
+
     render() {
+        let infoElement = this.props.infoElement.map((item) => {// информация по левелу
+            return <li className="level__li" key={
+                Math.random(1, 42)
+            }>{item}</li>
+        });
+
         return (
             <div className="level">
-                <div  className="level__header"><p>Задача</p></div>
+                <div className="level__header"><p>{this.props.taskDescription}</p></div>
                 <div className="level__ul">
                     <ul>
-                        <li className="level__li"> flex - это</li>
-                        <li className="level__li"> flex - это</li>
-                        <li className="level__li"> flex - это</li>
+                        {infoElement}
                     </ul>
                 </div>
             </div>
