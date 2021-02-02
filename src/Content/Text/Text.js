@@ -44,17 +44,18 @@ class Text extends React.Component {
     // const obg={};
     // obg[key] = value;
     // console.log(this.state.level1.introductory)
-    console.log(this.state.level1[0].introductory)
+    console.log(this.state.level1)
   }
 
 
   render() {
+     
     return (
       <div className="text-conteiner">
-        <HeaderText />
+        <HeaderText introductory = {this.state.level1[0].introductory}/>
         <ButtonText />
         <InfoLevel />
-        <Pre test={this.test} />
+        <Pre test={this.test}   />
         <StartButton test={this.test2} />
       </div>
     );

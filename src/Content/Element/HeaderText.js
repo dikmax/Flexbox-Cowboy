@@ -16,9 +16,7 @@ class HeaderText extends React.Component {
   render() {
     return (
     <div className="header-text">
-         <div className="header__title"><p>Привет! "Информация о блоке".
-          Мы пойдем от простого к сложному
-           "Первый блок"</p></div>
+         <div className="header__title"><p>{this.props.introductory}</p></div>
       </div>
     );
   }
