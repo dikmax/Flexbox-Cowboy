@@ -24,26 +24,30 @@ class Text extends React.Component {
   };
 
 
-  // test = (inpt) => {
-  //   // вывожу от пользователя и передаю в state
-  //   this.setState({ level1: inpt })
-  // }
+   test = (inpt) => { // меняем стейт из инпута
+    const newDisplay = this.state.level1
+    newDisplay[2].task = (inpt)
+    this.setState({
+      level1: newDisplay
+    })
+    console.log(this.state.level1[2].task)
+  }
 
 
   test2 = () => {
-    // // изменяю текс из инпута в подходящий для style jsx
-    // let valueInpt = this.state.level1.split(':')
-    // let key = valueInpt[0].split('-') 
-    //   .map(
-    //     (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
-    //   )
-    //   .join('') 
-    // let value = valueInpt[1]
-    // const obg={};
-    // obg[key] = value;
-    // console.log(this.state.level1.introductory)
-    this.props.dataStyle(this.state.level1[2].task)
-    console.log('щл')
+     // изменяю текст из инпута в подходящий для style jsx, передаю вверх готовый стиль
+    let valueInpt = this.state.level1[2].task.split(':')
+    let key = valueInpt[0].split('-') 
+      .map(
+        (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+       )
+       .join('') 
+    let value = valueInpt[1]
+    const obj={};
+    obj[key] = value;
+ 
+  this.props.dataStyle(obj)
+    
   }
 
 
