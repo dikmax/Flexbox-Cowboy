@@ -17,9 +17,7 @@ class Text extends React.Component {
     this.state = {
       level1: ([ {introductory:'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"'},
       {taskDescription: 'надо то то'},
-      {task: {display: 'flex;'}}])
-
-
+      {task: {justifyContent: 'center;'}}]) 
       };
     
 
@@ -44,7 +42,8 @@ class Text extends React.Component {
     // const obg={};
     // obg[key] = value;
     // console.log(this.state.level1.introductory)
-    console.log(this.state.level1)
+    this.props.dataStyle(this.state.level1[2].task)
+    console.log('щл')
   }
 
 

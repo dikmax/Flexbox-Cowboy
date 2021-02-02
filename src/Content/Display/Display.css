@@ -4,6 +4,7 @@
     background: url('/src/Source/svg/desert.svg');
     background-repeat: no-repeat;
     background-size:cover;  
+    display: flex;
 }
 .display-item{
   margin: 3px;
@@ -14,6 +15,5 @@
   background-size: contain;
 }
 .move{
-   display: flex;
-   justify-content: center;
+  
 }

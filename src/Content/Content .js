@@ -9,16 +9,24 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: ['left', 'rite']
+      data: { justifyContent: 'flex-end' }
     }
   };
-  
+
+  dataStyle = (item) => {
+    this.setState({
+      data: item
+    })
+    console.log(this.state.data)
+  }
+
+
 
   render() {
     return (
       <div className="content-flex">
-        <Text />
-        <Display />
+        <Text dataStyle={this.dataStyle}/>
+        <Display/>
       </div>
     );
   }
