@@ -56,7 +56,7 @@ class Text extends React.Component {
       newObj[item.split(':')[0]] = item.split(':')[1]
       return newObj;
     })
-    console.log(obj[0],obj[1]);
+    this.props.dataStyle(obj);
   }
 
 
