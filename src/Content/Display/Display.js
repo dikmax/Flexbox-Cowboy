@@ -11,10 +11,11 @@ class Display extends React.Component{
     this.state = {
     data: 'Display'
   }};
+
  
 render(){
   return (
-    <div className="display-conteiner " /*style={this.props.itemDisplay}*/ >
+    <div className="display-conteiner "/*style={this.props.itemDisplay}*/ >
      <div className="display-item"></div>
     </div>
   );
