@@ -53,7 +53,7 @@ class Text extends React.Component {
     });
     const obj = result.map(function (item) { // делаю подходящий для JSX формат.
       const newObj = {};
-      newObj[item.split(':')[0]] = item.split(':')[1]
+      newObj[item.split(':')[0]] = item[1]
       return newObj;
     })
     this.props.dataStyle(obj)
