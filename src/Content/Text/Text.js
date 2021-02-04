@@ -28,7 +28,7 @@ class Text extends React.Component {
         [{ introductory: 'третий' },
         { taskDescription: 'третий' },
         { task: { justifyContent: 'третий' } },
-        { infoElement: [['третий'], ['третий']] }]
+        { infoElement: [['третий'], ['третий'],['третий'], ['третий']] }]
       ],
       chLevel: 0
     };
@@ -65,16 +65,17 @@ class Text extends React.Component {
 
 
   test2 = () => {
-
+ 
+    try{
     let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
-    const separation = clone[2].task //убираем лишнии пробелы и ;
+    const separation = clone[2].task //убираю лишнии пробелы и ;
       .replace(/\s/g, '')
       .split(';')
       .filter(function (item) {
         return item !== "";
       });
 
-    const result = separation.map(function (item) { // убираем дефис и делаем заглавные буквы
+    const result = separation.map(function (item) { // убираю дефис и делаем заглавные буквы PS сделать для нескольких значений
       return item.split('-').map(
         (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
       ).join('')
@@ -85,7 +86,10 @@ class Text extends React.Component {
       return newObj;
     })
     this.props.dataStyle(obj[0]);
-    console.log('test2')
+    console.log('ok test2')
+  }
+  catch{
+     console.log('неудачный test 2')}
   }
 
 
