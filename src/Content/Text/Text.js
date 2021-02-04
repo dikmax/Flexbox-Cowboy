@@ -31,8 +31,9 @@ class Text extends React.Component {
         { infoElement: [['третий'], ['третий'],['третий'], ['третий']] }]
       ],
       chLevel: 0
+     
     };
-
+   
   };
 
 
@@ -63,7 +64,7 @@ class Text extends React.Component {
     })
   }
 
-
+ 
   test2 = () => {
  
     try{
@@ -89,7 +90,7 @@ class Text extends React.Component {
     console.log('ok test2')
   }
   catch{
-     console.log('неудачный test 2')}
+     console.log('err test2 in outPut')}
   }
 
 
