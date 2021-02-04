@@ -23,10 +23,11 @@ class ConteinerContent extends React.Component {
 
 
   render() {
+    const{data} = this.state
     return (
       <div className="content-flex">
         <Text dataStyle={this.dataStyle}/>
-        <Display itemDisplay={this.state.data}/>
+        <Display itemDisplay={data}/>
       </div>
     );
   }
