@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../Content/ConteinerContent.css';
 import Display from './Display/Display';
 import Text from './Text/Text'
