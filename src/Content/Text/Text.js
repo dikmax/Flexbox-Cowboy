@@ -1,10 +1,10 @@
 import React from 'react';
 
 import '../Text/Text.css'
-import HeaderText from '../Element/HeaderText'
-import ButtonText from '../Element/ButtonText'
+import TitleHeader from '../Element/TitleHeader'
+import TextBtn from '../Element/TextBtn'
 import InfoLevel from '../Element/InfoLevel'
-import Pre from '../Element/Pre'
+import Output from '../Element/Output'
 import StartButton from '../Element/StartButton'
 
 
@@ -94,10 +94,10 @@ class Text extends React.Component {
 
     return (
       <div className="text-conteiner">
-        <HeaderText introductory={this.state.level[this.state.chLevel][0].introductory} />
-        <ButtonText setLevelDown={this.setLevelDown} setLevelUp={this.setLevelUp} />
+        <TitleHeader introductory={this.state.level[this.state.chLevel][0].introductory} />
+        <TextBtn setLevelDown={this.setLevelDown} setLevelUp={this.setLevelUp} />
         <InfoLevel infoElement={this.state.level[this.state.chLevel][3].infoElement} taskDescription={this.state.level[0][1].taskDescription} />
-        <Pre test={this.test} />
+        <Output test={this.test} />
         <StartButton test={this.test2} />
       </div>
     );

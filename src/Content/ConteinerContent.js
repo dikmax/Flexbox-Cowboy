@@ -1,11 +1,11 @@
 import React from 'react';
 
-import '../Content/Content.css';
-import Display from '../Content/Display/Display';
-import Text from '../Content/Text/Text'
+import '../Content/ConteinerContent.css';
+import Display from './Display/Display';
+import Text from './Text/Text'
 
 
-class Content extends React.Component {
+class ConteinerContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,5 +33,5 @@ class Content extends React.Component {
   }
 };
 
-export default Content;
+export default ConteinerContent;
 

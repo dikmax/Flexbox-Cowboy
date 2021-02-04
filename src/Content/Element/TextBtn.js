@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Element/ButtonText.css';
+import '../Element/TextBtn.css';
 
 
 

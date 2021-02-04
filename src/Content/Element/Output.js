@@ -1,11 +1,11 @@
 import React from 'react';
 
-import '../Element/Pre.css';
+import '../Element/Output.css';
 
 
  
 
-class Pre extends React.Component {   
+class Output extends React.Component {   
  render() {
         return (
             <div className="exit-conteiner">
@@ -22,5 +22,5 @@ class Pre extends React.Component {
     }
 };
 
-export default Pre;
+export default Output;
 
