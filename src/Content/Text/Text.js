@@ -99,8 +99,8 @@ class Text extends React.Component {
 
   render() {
     const { level, chLevel } = this.state;
-    const{setLevelUp,setLevelDown, test, test2} = this;
-    
+    const {setLevelUp,setLevelDown, test, test2} = this;
+ 
     return (
       <div className="text-conteiner">
         <TitleHeader introductory={level[chLevel][0].introductory} />
