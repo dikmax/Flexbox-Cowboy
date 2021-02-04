@@ -22,7 +22,7 @@ class Text extends React.Component {
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.']] }],
 
-        [{ introductory: 'Компания, в моем лице, считает что ты молодец' },
+        [{ introductory: 'Компания, в моем лице, считает что ты молодец!' },
         { taskDescription: 'Ты знаешь, что нужно сделать.' },
         { task: { justifyContent: 'center' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] }]

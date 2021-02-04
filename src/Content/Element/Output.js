@@ -11,8 +11,8 @@ const Output = ({test} = this.props) => {
         <div className="exit-conteiner">
             <p className="exit--befor">  .class &ensp;&#123; <br />display: flex; </p>
             <textarea className="exit__input"
-              //  placeholder="Поле ввода"
-              defaultValue='justify-content: flex-end'
+              placeholder="Поле для написания кода"
+             // defaultValue='justify-content: flex-end'
                 rows="3"
                 onChange={(e) => {test(e.target.value) }}
             ></textarea>

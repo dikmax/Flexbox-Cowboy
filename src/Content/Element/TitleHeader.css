@@ -1,6 +1,13 @@
 .header__title{
+  
     font-family: fantasy;
     font-size: 20px;
     color: #666666;
     text-align: left;
+    margin: 0 auto;
+}
+.header__title{
+    
+   
+    text-align: center;
 }
