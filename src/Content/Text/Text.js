@@ -30,17 +30,16 @@ class Text extends React.Component {
         { taskDescription: 'третий' },
         { task: { justifyContent: 'третий' } },
         { infoElement: [['третий'], ['третий']] }]
-      ]
-
+      ],
+      chLevel : 0
     };
-
-
   };
+
 
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.level
-    newDisplay[0][2].task = (inpt)
+    newDisplay[this.state.chLevel][2].task = (inpt)
     this.setState({
       level: newDisplay
     })
@@ -49,7 +48,7 @@ class Text extends React.Component {
 
   test2 = () => {
 
-    let clone = this.state.level[0].slice(0) // клонирую state
+    let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
     const separation = clone[2].task //убираем лишнии пробелы и ;
       .replace(/\s/g, '')
       .split(';')
@@ -68,18 +67,17 @@ class Text extends React.Component {
       return newObj;
     })
     this.props.dataStyle(obj[0]);
-    console.log(obj[0], 'test2')
-
+    console.log(obj[0], this.state.chLevel , 'test2')
   }
 
 
   render() {
-
+  
     return (
       <div className="text-conteiner">
-        <HeaderText introductory={this.state.level[0][0].introductory} />
+        <HeaderText introductory={this.state.level[this.state.chLevel][0].introductory} />
         <ButtonText />
-        <InfoLevel infoElement={this.state.level[0][3].infoElement} taskDescription={this.state.level[0][1].taskDescription} />
+        <InfoLevel infoElement={this.state.level[this.state.chLevel][3].infoElement} taskDescription={this.state.level[0][1].taskDescription} />
         <Pre test={this.test} />
         <StartButton test={this.test2} />
       </div>
