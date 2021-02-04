@@ -13,19 +13,19 @@ class Text extends React.Component {
     this.state = {
       level: [
         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
-        { taskDescription: 'Помести преступника в клетку(центр)' },
+        { taskDescription: 'Помести преступника в клетку(центр).' },
         { task: { justifyContent: 'flex-start' } },
-        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: center; ~ располагает елемент в центре блока']] }],
+        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] }],
 
-        [{ introductory: 'второй' },
-        { taskDescription: 'второй' },
+        [{ introductory: 'Начало положено. Как известно "Дорогу осилит идущий".' },
+        { taskDescription: 'Теперь помести преступника в клету справа.' },
         { task: { justifyContent: 'flex-start' } },
-        { infoElement: [['второй'], ['второй']] }],
+        { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.']] }],
 
-        [{ introductory: 'третий' },
-        { taskDescription: 'третий' },
-        { task: { justifyContent: 'третий' } },
-        { infoElement: [['третий'], ['третий'], ['третий'], ['третий']] }]
+        [{ introductory: 'Компания, в моем лице, считает что ты молодец' },
+        { taskDescription: 'Ты знаешь, что нужно сделать.' },
+        { task: { justifyContent: 'center' } },
+        { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] }]
       ],
       chLevel: 0
 
