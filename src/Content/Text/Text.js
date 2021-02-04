@@ -31,7 +31,7 @@ class Text extends React.Component {
         { task: { justifyContent: 'третий' } },
         { infoElement: [['третий'], ['третий']] }]
       ],
-      chLevel: 2
+      chLevel: 0
     };
 
   };
