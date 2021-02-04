@@ -37,13 +37,24 @@ class Text extends React.Component {
   };
 
 
-setLevel = () =>{
+setLevelDown = () =>{
+  let count = this.state.chLevel;
+  if(count < this.state.level.length & count !== 0 ){
+    count --;
+  }
   this.setState({
-    chLevel: 1
+    chLevel: count
   })
-
 }
-
+setLevelUp = () =>{
+  let count = this.state.chLevel;
+  if(count < (this.state.level.length - 1) ){
+    count ++;
+  }
+  this.setState({
+    chLevel: count
+  })
+}
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.level
@@ -84,7 +95,7 @@ setLevel = () =>{
     return (
       <div className="text-conteiner">
         <HeaderText introductory={this.state.level[this.state.chLevel][0].introductory} />
-        <ButtonText setLevel = {this.setLevel} />
+        <ButtonText setLevelDown= {this.setLevelDown} setLevelUp= {this.setLevelUp}/>
         <InfoLevel infoElement={this.state.level[this.state.chLevel][3].infoElement} taskDescription={this.state.level[0][1].taskDescription} />
         <Pre test={this.test} />
         <StartButton test={this.test2} />
