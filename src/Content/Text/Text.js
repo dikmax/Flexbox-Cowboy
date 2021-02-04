@@ -7,9 +7,6 @@ import Output from '../Element/Output'
 import StartButton from '../Element/StartButton'
 
 
-
-
-
 class Text extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +41,8 @@ class Text extends React.Component {
     this.setState({
       chLevel: count
     })
-  }
+  };
+
   setLevelUp = () => {
     let count = this.state.chLevel;
     if (count < (this.state.level.length - 1)) {
@@ -53,7 +51,7 @@ class Text extends React.Component {
     this.setState({
       chLevel: count
     })
-  }
+  };
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.level
@@ -61,10 +59,10 @@ class Text extends React.Component {
     this.setState({
       level: newDisplay
     })
-  }
+  };
 
   test2 = () => {
-
+    
     try {
       let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
       const separation = clone[2].task //убираю лишнии пробелы и точки с запятой
@@ -95,7 +93,7 @@ class Text extends React.Component {
     catch {
       console.log('err test2 in outPut')
     }
-  }
+  };
 
 
   render() {
@@ -111,7 +109,7 @@ class Text extends React.Component {
         <StartButton test={this.test2} />
       </div>
     );
-  }
+  };
 };
 
 export default Text;
