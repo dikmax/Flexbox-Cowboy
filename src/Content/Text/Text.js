@@ -76,10 +76,13 @@ class Text extends React.Component {
 
 
 
-      const result = separation.map(function (item) { // убираю дефис и делаем заглавные буквы= PS сделать для нескольких значений
-        return item.split('-').map(
-          (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
-        ).join('')
+      const result = separation.map(function (item) { // убираю дефис и делаем заглавные буквы
+
+        return (item.split(':')[0])
+          .split('-')
+          .map(
+            (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+          ).join('') + ':' + item.split(':')[1]
       });
 
       const obj = result.map(function (item) { // делаю подходящий для JSX формат.
@@ -88,7 +91,7 @@ class Text extends React.Component {
         return newObj;
       })
       this.props.dataStyle(obj[0]);
-      console.log( result ,'test2')
+      console.log(result, 'test2')
     }
 
     catch {
