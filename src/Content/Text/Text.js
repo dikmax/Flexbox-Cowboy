@@ -19,6 +19,10 @@ class Text extends React.Component {
         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
         { taskDescription: 'Помести преступника в клетку' },
         { task: { justifyContent: 'flex-start' } },
+        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: centr; ~ располагает елемент в центре блока']] }],
+         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
+        { taskDescription: 'Помести преступника в клетку' },
+        { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: centr; ~ располагает елемент в центре блока']] }]
       ]
         
