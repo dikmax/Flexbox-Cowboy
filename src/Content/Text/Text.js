@@ -15,17 +15,23 @@ class Text extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      level:[
+      level: [
         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
         { taskDescription: 'Помести преступника в клетку' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: centr; ~ располагает елемент в центре блока']] }],
-         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
-        { taskDescription: 'Помести преступника в клетку' },
+
+        [{ introductory: 'второй' },
+        { taskDescription: 'второй' },
         { task: { justifyContent: 'flex-start' } },
-        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: centr; ~ располагает елемент в центре блока']] }]
+        { infoElement: [['второй'], ['второй']] }],
+
+        [{ introductory: 'третий' },
+        { taskDescription: 'третий' },
+        { task: { justifyContent: 'третий' } },
+        { infoElement: [['третий'], ['третий']] }]
       ]
-        
+
     };
 
 
@@ -42,9 +48,9 @@ class Text extends React.Component {
 
 
   test2 = () => {
-    
-     let clone = this.state.level[0].slice(0) // клонирую state
-     const separation = clone[2].task //убираем лишнии пробелы и ;
+
+    let clone = this.state.level[0].slice(0) // клонирую state
+    const separation = clone[2].task //убираем лишнии пробелы и ;
       .replace(/\s/g, '')
       .split(';')
       .filter(function (item) {
@@ -55,7 +61,6 @@ class Text extends React.Component {
       return item.split('-').map(
         (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
       ).join('')
-
     });
     const obj = result.map(function (item) { // делаю подходящий для JSX формат.
       const newObj = {};
@@ -64,7 +69,7 @@ class Text extends React.Component {
     })
     this.props.dataStyle(obj[0]);
     console.log(obj[0], 'test2')
-    
+
   }
 
 
