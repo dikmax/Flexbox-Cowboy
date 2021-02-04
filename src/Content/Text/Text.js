@@ -76,7 +76,7 @@ class Text extends React.Component {
 
     const result = separation.map(function (item) { // убираем дефис и делаем заглавные буквы
       return item.split('-').map(
-        (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+        (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
       ).join('')
     });
     const obj = result.map(function (item) { // делаю подходящий для JSX формат.

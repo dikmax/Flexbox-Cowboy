@@ -3,7 +3,7 @@ import React from 'react';
 import '../Element/Output.css';
 
 
- 
+  
 
 class Output extends React.Component {   
  render() {

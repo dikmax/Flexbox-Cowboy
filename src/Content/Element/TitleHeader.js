@@ -1,25 +1,17 @@
 import React from 'react';
-
 import '../Element/TitleHeader.css';
 
+ 
 
 
-
-class HeaderText extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: 'Text'
-    }
-  };
-
-  render() {
+const HeaderText = ({introductory} = this.props) => {
+  
     return (
     <div className="header-text">
-         <div className="header__title"><p>{this.props.introductory}</p></div>
+         <div className="header__title"><p>{introductory}</p></div>
       </div>
     );
-  }
+  
 };
 
 export default HeaderText;

@@ -12,7 +12,7 @@ class InfoLevel extends React.Component {
             data: 'Text'
         }
     };
-
+ 
     render() {
         let infoElement = this.props.infoElement.map((item) => {// информация по левелу
             return <li className="level__li" key={
