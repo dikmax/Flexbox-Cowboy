@@ -68,13 +68,11 @@ class Text extends React.Component {
     try {
       let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
       const separation = clone[2].task //убираю лишнии пробелы и точки с запятой
-        .replace(/\s/g, '')
+       .replace(/\s/g, '')
         .split(';')
         .filter(function (item) {
           return item !== "";
         });
-
-
 
       const result = separation.map(function (item) { // убираю дефис и делаем заглавные буквы
 
