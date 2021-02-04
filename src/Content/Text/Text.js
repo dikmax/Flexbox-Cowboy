@@ -72,7 +72,7 @@ class Text extends React.Component {
           return item !== "";
         });
 
-      const transform = separation.map(function (item) { // убираю дефис и делаем заглавные буквы
+      const transform = separation.map(function (item) { // убираю лишнее и делаю заглавные буквы
 
         return (item.split(':')[0])
           .split('-')
@@ -86,8 +86,9 @@ class Text extends React.Component {
         newObj[item.split(':')[0]] = item.split(':')[1]
         return newObj;
       })
-      this.props.dataStyle(obj[0], 'test2');
-    
+
+      this.props.dataStyle( obj[0]);
+    console.log(obj)
     }
 
     catch {
