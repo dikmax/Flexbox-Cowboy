@@ -20,7 +20,7 @@ class ButtonText extends React.Component {
                 <div className="button__text"><p>Уровень</p></div>
                 <div className="batton-item">
                     <div ><button className="button--1" type="button"
-                    onClick={()=> console.log(this.props)}>НАЗАД</button></div>
+                    onClick={this.props.setLevel }>НАЗАД</button></div>
                     <div ><button className="button--2" type="button">вперед</button></div>
                     <div ></div>
                 </div>

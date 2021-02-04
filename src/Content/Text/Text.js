@@ -31,11 +31,18 @@ class Text extends React.Component {
         { task: { justifyContent: 'третий' } },
         { infoElement: [['третий'], ['третий']] }]
       ],
-      chLevel : 0
+      chLevel : 2
     };
-    const {chlevel, level} = this.state;
+  
   };
 
+
+setLevel = () =>{
+  this.setState({
+    chLevel: 1
+  })
+
+}
 
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
@@ -77,7 +84,7 @@ class Text extends React.Component {
     return (
       <div className="text-conteiner">
         <HeaderText introductory={this.state.level[this.state.chLevel][0].introductory} />
-        <ButtonText />
+        <ButtonText setLevel = {this.setLevel} />
         <InfoLevel infoElement={this.state.level[this.state.chLevel][3].infoElement} taskDescription={this.state.level[0][1].taskDescription} />
         <Pre test={this.test} />
         <StartButton test={this.test2} />
