@@ -33,6 +33,7 @@ class Text extends React.Component {
       ],
       chLevel : 0
     };
+    const {chlevel, level} = this.state;
   };
 
 
