@@ -31,30 +31,30 @@ class Text extends React.Component {
         { task: { justifyContent: 'третий' } },
         { infoElement: [['третий'], ['третий']] }]
       ],
-      chLevel : 2
+      chLevel: 2
     };
-  
+
   };
 
 
-setLevelDown = () =>{
-  let count = this.state.chLevel;
-  if(count < this.state.level.length & count !== 0 ){
-    count --;
+  setLevelDown = () => {
+    let count = this.state.chLevel;
+    if (count < this.state.level.length & count !== 0) {
+      count--;
+    }
+    this.setState({
+      chLevel: count
+    })
   }
-  this.setState({
-    chLevel: count
-  })
-}
-setLevelUp = () =>{
-  let count = this.state.chLevel;
-  if(count < (this.state.level.length - 1) ){
-    count ++;
+  setLevelUp = () => {
+    let count = this.state.chLevel;
+    if (count < (this.state.level.length - 1)) {
+      count++;
+    }
+    this.setState({
+      chLevel: count
+    })
   }
-  this.setState({
-    chLevel: count
-  })
-}
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.level
@@ -86,16 +86,16 @@ setLevelUp = () =>{
       return newObj;
     })
     this.props.dataStyle(obj[0]);
-    console.log(obj[0], this.state.chLevel , 'test2')
+    console.log('test2')
   }
 
 
   render() {
-  
+
     return (
       <div className="text-conteiner">
         <HeaderText introductory={this.state.level[this.state.chLevel][0].introductory} />
-        <ButtonText setLevelDown= {this.setLevelDown} setLevelUp= {this.setLevelUp}/>
+        <ButtonText setLevelDown={this.setLevelDown} setLevelUp={this.setLevelUp} />
         <InfoLevel infoElement={this.state.level[this.state.chLevel][3].infoElement} taskDescription={this.state.level[0][1].taskDescription} />
         <Pre test={this.test} />
         <StartButton test={this.test2} />

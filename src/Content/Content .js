@@ -17,8 +17,8 @@ class Content extends React.Component {
     this.setState({
       data: item
     })
-  const stl = {...this.state.data}
-    console.log(stl, 'content')
+  
+    console.log('content')
   }
 
 
