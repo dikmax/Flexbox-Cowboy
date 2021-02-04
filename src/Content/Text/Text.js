@@ -28,14 +28,13 @@ class Text extends React.Component {
         [{ introductory: 'третий' },
         { taskDescription: 'третий' },
         { task: { justifyContent: 'третий' } },
-        { infoElement: [['третий'], ['третий'],['третий'], ['третий']] }]
+        { infoElement: [['третий'], ['третий'], ['третий'], ['третий']] }]
       ],
       chLevel: 0
-     
-    };
-   
-  };
 
+    };
+
+  };
 
   setLevelDown = () => {
     let count = this.state.chLevel;
@@ -64,45 +63,47 @@ class Text extends React.Component {
     })
   }
 
- 
   test2 = () => {
- 
-    try{
-    let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
-    const separation = clone[2].task //убираю лишнии пробелы и ;
-      .replace(/\s/g, '')
-      .split(';')
-      .filter(function (item) {
-        return item !== "";
+
+    try {
+      let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
+      const separation = clone[2].task //убираю лишнии пробелы и ;
+        .replace(/\s/g, '')
+        .split(';')
+        .filter(function (item) {
+          return item !== "";
+        });
+
+      const result = separation.map(function (item) { // убираю дефис и делаем заглавные буквы= PS сделать для нескольких значений
+        return item.split('-').map(
+          (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+        ).join('')
       });
 
-    const result = separation.map(function (item) { // убираю дефис и делаем заглавные буквы PS сделать для нескольких значений
-      return item.split('-').map(
-        (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
-      ).join('')
-    });
-    const obj = result.map(function (item) { // делаю подходящий для JSX формат.
-      const newObj = {};
-      newObj[item.split(':')[0]] = item.split(':')[1]
-      return newObj;
-    })
-    this.props.dataStyle(obj[0]);
-    console.log('ok test2')
-  }
-  catch{
-     console.log('err test2 in outPut')}
+      const obj = result.map(function (item) { // делаю подходящий для JSX формат.
+        const newObj = {};
+        newObj[item.split(':')[0]] = item.split(':')[1]
+        return newObj;
+      })
+      this.props.dataStyle(obj[0]);
+      console.log('ok test2')
+    }
+
+    catch {
+      console.log('err test2 in outPut')
+    }
   }
 
 
   render() {
-  const{level,chLevel} = this.state
+    const { level, chLevel } = this.state
     return (
       <div className="text-conteiner">
         <TitleHeader introductory={level[chLevel][0].introductory} />
         <TextBtn setLevelDown={this.setLevelDown}
-                 setLevelUp={this.setLevelUp} />
+          setLevelUp={this.setLevelUp} />
         <InfoLevel infoElement={level[chLevel][3].infoElement}
-                   taskDescription={level[chLevel][1].taskDescription} />
+          taskDescription={level[chLevel][1].taskDescription} />
         <Output test={this.test} />
         <StartButton test={this.test2} />
       </div>
