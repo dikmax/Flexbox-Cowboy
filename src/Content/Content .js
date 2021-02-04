@@ -18,7 +18,7 @@ class Content extends React.Component {
       data: item
     })
   const stl = {...this.state.data}
-    console.log(stl)
+    console.log(stl, 'content')
   }
 
 

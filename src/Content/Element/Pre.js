@@ -14,7 +14,7 @@ class Pre extends React.Component {
                         //  placeholder="Поле ввода" 
                           defaultValue="justify-content: center; justify-content: flex-end" 
                           rows="3"
-                          onChange={(e)=>{this.props.test(e.target.value)}}
+                       onChange={(e)=>{this.props.test(e.target.value)}}
                 ></textarea>
                 <p className="exit--after"> &#125;</p>
             </div>)

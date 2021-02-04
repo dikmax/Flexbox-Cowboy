@@ -15,11 +15,13 @@ class Text extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      level:
+      level:[
         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
         { taskDescription: 'Помести преступника в клетку' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: centr; ~ располагает елемент в центре блока']] }]
+      ]
+        
     };
 
 
@@ -28,7 +30,7 @@ class Text extends React.Component {
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.level
-    newDisplay[2].task = (inpt)
+    newDisplay[0][2].task = (inpt)
     this.setState({
       level: newDisplay
     })
@@ -36,9 +38,9 @@ class Text extends React.Component {
 
 
   test2 = () => {
- 
-    let clone = this.state.level.slice(0) // клонирую state
-    const separation = clone[2].task //убираем лишнии пробелы и ;
+    
+     let clone = this.state.level[0].slice(0) // клонирую state
+     const separation = clone[2].task //убираем лишнии пробелы и ;
       .replace(/\s/g, '')
       .split(';')
       .filter(function (item) {
@@ -56,7 +58,8 @@ class Text extends React.Component {
       newObj[item.split(':')[0]] = item.split(':')[1]
       return newObj;
     })
-    this.props.dataStyle(obj);
+    this.props.dataStyle(obj[0]);
+    console.log(obj[0], 'test2')
     
   }
 
@@ -65,9 +68,9 @@ class Text extends React.Component {
 
     return (
       <div className="text-conteiner">
-        <HeaderText introductory={this.state.level[0].introductory} />
+        <HeaderText introductory={this.state.level[0][0].introductory} />
         <ButtonText />
-        <InfoLevel infoElement={this.state.level[3].infoElement} taskDescription={this.state.level[1].taskDescription} />
+        <InfoLevel infoElement={this.state.level[0][3].infoElement} taskDescription={this.state.level[0][1].taskDescription} />
         <Pre test={this.test} />
         <StartButton test={this.test2} />
       </div>
