@@ -67,12 +67,14 @@ class Text extends React.Component {
 
     try {
       let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
-      const separation = clone[2].task //убираю лишнии пробелы и ;
+      const separation = clone[2].task //убираю лишнии пробелы и точки с запятой
         .replace(/\s/g, '')
         .split(';')
         .filter(function (item) {
           return item !== "";
         });
+
+
 
       const result = separation.map(function (item) { // убираю дефис и делаем заглавные буквы= PS сделать для нескольких значений
         return item.split('-').map(
@@ -86,7 +88,7 @@ class Text extends React.Component {
         return newObj;
       })
       this.props.dataStyle(obj[0]);
-      console.log('ok test2')
+      console.log( result ,'test2')
     }
 
     catch {
