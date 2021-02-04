@@ -19,7 +19,7 @@ class Text extends React.Component {
         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
         { taskDescription: 'Помести преступника в клетку' },
         { task: { justifyContent: 'flex-start' } },
-        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: centr; ~ располагает елемент в центре блока']] }],
+        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X'], ['justify-content: center; ~ располагает елемент в центре блока']] }],
 
         [{ introductory: 'второй' },
         { taskDescription: 'второй' },
@@ -86,7 +86,7 @@ class Text extends React.Component {
       return newObj;
     })
     this.props.dataStyle(obj[0]);
-    console.log('test2')
+    console.log(obj[0])
   }
 
 

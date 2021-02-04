@@ -18,7 +18,7 @@ class ConteinerContent extends React.Component {
       data: item
     })
   
-    console.log('content')
+    console.log(this.state.data, 'content')
   }
 
 
