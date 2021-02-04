@@ -85,7 +85,7 @@ class Text extends React.Component {
       return newObj;
     })
     this.props.dataStyle(obj[0]);
-    console.log(obj[0])
+    console.log('test2')
   }
 
 
