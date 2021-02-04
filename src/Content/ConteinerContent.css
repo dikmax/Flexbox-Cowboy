@@ -1,3 +1,9 @@
-.content-flex{
-    display: flex;
+.content-flex {
+  display: flex;
 }
+
+@media  (max-width: 990px) {
+    .content-flex {
+      flex-direction: column-reverse;
+    }
+  }
