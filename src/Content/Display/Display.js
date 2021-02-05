@@ -13,7 +13,7 @@ class Display extends React.Component {
     }
   };
 
-  // style={blockСell[2]}
+  
   render() {
     const { blockСell } = this.state;
     return (

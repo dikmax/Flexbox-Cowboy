@@ -8,27 +8,30 @@ class ConteinerContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: { justifyContent: 'flex-start' }
+      textElem: { justifyContent: 'flex-start' },
+      changeLevel: 0
     }
   };
 
+
+
   dataStyle = (item) => {
     this.setState({
-      data: item
+      textElem: item
     })
-  
-    console.log(this.state.data, 'content')
+
+    console.log(this.state.textElem, 'content')
   }
 
 
 
   render() {
-    const{data} = this.state;
-    const{dataStyle}=this;
+    const { textElem } = this.state;
+    const { dataStyle } = this;
     return (
       <div className="content-flex">
-        <Text dataStyle={dataStyle}/>
-        <Display itemDisplay={data}/>
+        <Text dataStyle={dataStyle} />
+        <Display itemDisplay={textElem} />
       </div>
     );
   }
