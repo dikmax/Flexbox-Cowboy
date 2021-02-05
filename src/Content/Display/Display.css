@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size:cover;  
     display: flex;
+    position:relative;
 }
 .display-item--cowboy{
   margin: 3px;
@@ -17,13 +18,14 @@
 .display-item--prison{
   position: absolute;
   display: block;
-  min-width: 8.5%;
-  height: 138px;
+  min-width: 13.5%;
+  height: 128px;
 
   background: url('/src/Source/png/prison.png');
   background-size: contain;
- 
+  margin: 4px 353px;
 
   
  
 }
+/* сделать дочернему 100%  position: absolute; flex box, a внутри флех */
