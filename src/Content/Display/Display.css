@@ -1,31 +1,33 @@
-.display-conteiner{
-    min-height: 450px;
-    flex-basis: 60%;
-    background: url('/src/Source/svg/desert.svg');
-    background-repeat: no-repeat;
-    background-size:cover;  
-    display: flex;
-    position:relative;
+.display-conteiner {
+  min-height: 450px;
+  flex-basis: 60%;
+  background: url("/src/Source/svg/desert.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
 }
-.display-item--cowboy{
+.display-item--cowboy {
   margin: 3px;
   min-width: 8.5%;
   min-height: 29%;
-  background: url('/src/Source/svg/cowboy.svg');
+  background: url("/src/Source/svg/cowboy.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
-.display-item--prison{
+.display-item {
   position: absolute;
-  display: block;
-  min-width: 13.5%;
-  height: 128px;
-
-  background: url('/src/Source/png/prison.png');
-  background-size: contain;
-  margin: 4px 353px;
-
-  
- 
+  left: 0;
+  right: 0;
+  margin: 4px 0;
+  display: flex;
+  justify-content: center;
 }
-/* сделать дочернему 100%  position: absolute; flex box, a внутри флех */
+.display-item--prison {
+  background: url("/src/Source/png/prison.png");
+  background-size: contain;
+  width: 75px;
+  height: 120px;
+  padding-top: 0;
+}
+/* сделать дочернему 100%  position: absolute; flex box, a внутри флех  = монеточка*/
