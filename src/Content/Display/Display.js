@@ -9,7 +9,7 @@ class Display extends React.Component {
     super(props);
     this.state = {
       blockCowboy: 'Man',
-      blockСell: 'Prison'
+      blockСell: [{ margin: '4px 353px'}]
     }
   };
 
@@ -18,7 +18,7 @@ class Display extends React.Component {
     return (
       <div className="display-conteiner " style={this.props.itemDisplay} >
         <div className="display-item--cowboy"></div>
-         <div className="display-item--prison"><div><p>Клетка</p></div></div>
+        <div className="display-item--prison" style={this.state.blockСell[0]}></div> 
       </div>
     );
   }
