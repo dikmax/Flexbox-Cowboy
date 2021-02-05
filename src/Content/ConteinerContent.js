@@ -19,7 +19,6 @@ class ConteinerContent extends React.Component {
     this.setState({
       textElem: item
     })
-
     console.log(this.state.textElem, 'content')
   }
 

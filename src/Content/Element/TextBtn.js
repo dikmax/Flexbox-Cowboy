@@ -17,7 +17,7 @@ const ButtonText = ({ setLevelDown, setLevelUp } = this.props) => {
                     <div ></div>
                 </div>
             </div>
-        </div>
+        </div> 
     );
 
 };
