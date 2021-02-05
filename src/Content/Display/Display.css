@@ -6,14 +6,11 @@
     background-size:cover;  
     display: flex;
 }
-.display-item{
+.display-item--cowboy{
   margin: 3px;
   min-width: 8.5%;
   min-height: 29%;
   background: url('/src/Source/svg/cowboy.svg');
   background-repeat: no-repeat;
   background-size: contain;
-}
-.move{
-  
 }
