@@ -15,10 +15,11 @@ class Display extends React.Component {
 
 
   render() {
+   const {blockСell} = this.state;
     return (
       <div className="display-conteiner " style={this.props.itemDisplay} >
         <div className="display-item--cowboy"></div>
-        <div className="display-item--prison" style={this.state.blockСell[0]}></div> 
+        <div className="display-item--prison" style={blockСell[0]}></div> 
       </div>
     );
   }
