@@ -92,7 +92,7 @@ class ConteinerContent extends React.Component {
       this.setState({
         textElem: obj[0]
       })
-      console.log(this.state.level)
+      console.log(obj)
     
     }
 
@@ -104,7 +104,7 @@ class ConteinerContent extends React.Component {
   render() {
 
     const { setLevelUp, setLevelDown, test, test2 } = this;
-    const { textElem, level, chLevel } = this.state;
+    const {  level, chLevel } = this.state;
 
     return (
       <div className="content-flex">
@@ -117,7 +117,7 @@ class ConteinerContent extends React.Component {
           <Output test={test} />
           <StartButton test={test2} />
         </div>
-        <Display itemDisplay={textElem} />
+        <Display displayPrison={level[chLevel][4].locationCells} displayCowboy={level[chLevel][2].task} />
       </div>
     );
   }
