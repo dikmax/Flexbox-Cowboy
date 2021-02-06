@@ -23,13 +23,13 @@ class ConteinerContent extends React.Component {
         { taskDescription: 'Теперь помести преступника в клету справа.' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.']] },
-        {locationCells:{justifyContent: 'flex-end'}},{id:1}],
+        {locationCells:{justifyContent: 'flex-end'}},{id:2}],
 
         [{ introductory: 'Компания, в моем лице, считает что ты молодец!' },
         { taskDescription: 'Ты знаешь, что нужно сделать.' },
         { task: { justifyContent: 'center' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] },
-        {locationCells:{ justifyContent: 'flex-start' }},{id:1}]
+        {locationCells:{ justifyContent: 'flex-start' }},{id:3}]
       ],
       textElem: { justifyContent: 'flex-start' },
       chLevel: 0,
@@ -91,8 +91,8 @@ class ConteinerContent extends React.Component {
       console.log(...obj)
       this.setState({
         textElem: obj[0]
-
       })
+      console.log(this.state.level)
     
     }
 
