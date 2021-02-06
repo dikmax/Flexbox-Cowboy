@@ -17,42 +17,44 @@ class ConteinerContent extends React.Component {
         { taskDescription: 'Помести преступника в клетку(центр).' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
-          {locationCells:{justifyContent: 'center'}}, {id:1}],
+        { locationCells: { justifyContent: 'center' } }, { id: 1 }],
 
         [{ introductory: 'Начало положено. Как известно "Дорогу осилит идущий".' },
         { taskDescription: 'Теперь помести преступника в клету справа.' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.']] },
-        {locationCells:{justifyContent: 'flex-end'}},{id:2}],
+        { locationCells: { justifyContent: 'flex-end' } }, { id: 2 }],
 
         [{ introductory: 'Компания, в моем лице, считает что ты молодец!' },
         { taskDescription: 'Ты знаешь, что нужно сделать.' },
         { task: { justifyContent: 'center' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] },
-        {locationCells:{ justifyContent: 'flex-start' }},{id:3}]
+        { locationCells: { justifyContent: 'flex-start' } }, { id: 3 }]
       ],
       textElem: { justifyContent: 'flex-start' },
       chLevel: 0,
+
+      newLev: [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
+        { taskDescription: 'Помести преступника в клетку(центр).' },
+        { task: { justifyContent: 'flex-start' } },
+        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
+        { locationCells: { justifyContent: 'center' } }, { id: 1 }]
     }
   };
   setLevelDown = () => {
-    let count = this.state.chLevel;
-    if (count < this.state.level.length & count !== 0) {
-      count--;
+    if(this.state.newLev[5].id !== 1){
+      this.setState({
+        newLev: this.state.level[(this.state.newLev[5].id) - 2]
+      })
     }
-    this.setState({
-      chLevel: count
-    })
   };
 
   setLevelUp = () => {
-    let count = this.state.chLevel;
-    if (count < (this.state.level.length - 1)) {
-      count++;
+    if(this.state.newLev[5].id !== 3){
+      this.setState({
+        newLev: this.state.level[this.state.newLev[5].id]
+      })
     }
-    this.setState({
-      chLevel: count
-    })
   };
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
@@ -93,7 +95,7 @@ class ConteinerContent extends React.Component {
         textElem: obj[0]
       })
       console.log(obj)
-    
+
     }
 
     catch {
@@ -104,20 +106,20 @@ class ConteinerContent extends React.Component {
   render() {
 
     const { setLevelUp, setLevelDown, test, test2 } = this;
-    const {  level, chLevel } = this.state;
+    const { newLev } = this.state;
 
     return (
       <div className="content-flex">
         <div className="text-conteiner">
-          <TitleHeader introductory={level[chLevel][0].introductory} />
+          <TitleHeader introductory={newLev[0].introductory} />
           <TextBtn setLevelDown={setLevelDown}
             setLevelUp={setLevelUp} />
-          <InfoLevel infoElement={level[chLevel][3].infoElement}
-            taskDescription={level[chLevel][1].taskDescription} />
+          <InfoLevel infoElement={newLev[3].infoElement}
+            taskDescription={newLev[1].taskDescription} />
           <Output test={test} />
           <StartButton test={test2} />
         </div>
-        <Display displayPrison={level[chLevel][4].locationCells} displayCowboy={level[chLevel][2].task} />
+        <Display displayPrison={newLev[4].locationCells} displayCowboy={newLev[2].task} />
       </div>
     );
   }
