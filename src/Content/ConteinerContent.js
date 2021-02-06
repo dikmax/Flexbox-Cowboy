@@ -17,19 +17,19 @@ class ConteinerContent extends React.Component {
         { taskDescription: 'Помести преступника в клетку(центр).' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
-          {locationCells:{justifyContent: 'center'}}],
+          {locationCells:{justifyContent: 'center'}}, {id:1}],
 
         [{ introductory: 'Начало положено. Как известно "Дорогу осилит идущий".' },
         { taskDescription: 'Теперь помести преступника в клету справа.' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.']] },
-        {locationCells:{justifyContent: 'flex-end'}}],
+        {locationCells:{justifyContent: 'flex-end'}},{id:1}],
 
         [{ introductory: 'Компания, в моем лице, считает что ты молодец!' },
         { taskDescription: 'Ты знаешь, что нужно сделать.' },
         { task: { justifyContent: 'center' } },
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] },
-        {locationCells:{ justifyContent: 'flex-start' }}]
+        {locationCells:{ justifyContent: 'flex-start' }},{id:1}]
       ],
       textElem: { justifyContent: 'flex-start' },
       chLevel: 0,
@@ -88,13 +88,16 @@ class ConteinerContent extends React.Component {
         newObj[item.split(':')[0]] = item.split(':')[1]
         return newObj;
       })
+      console.log(...obj)
+      this.setState({
+        textElem: obj[0]
 
-      this.props.dataStyle(...obj);
-      console.log(...obj, 'test2')
+      })
+    
     }
 
     catch {
-      console.log('err test2 in outPut')
+      console.log('err test2 in outPut', console.error(this.error))
     }
   };
 

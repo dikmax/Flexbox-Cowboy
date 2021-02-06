@@ -4,15 +4,10 @@ import '../Display/Display.css'
 
 
 
-class Display extends React.Component {
-  constructor(props) {
-    super(props);
+const Display = ({itemDisplay}= this.props) => {
   
-  };
-
   
-  render() {
-    const {itemDisplay}= this.props
+  
     return (
       <div className="display-conteiner " style={itemDisplay} >
         <div className="display-item--cowboy"></div>
@@ -20,7 +15,7 @@ class Display extends React.Component {
 
       </div>
     );
-  }
+  
 };
 
 export default Display;
