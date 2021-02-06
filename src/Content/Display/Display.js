@@ -12,10 +12,9 @@ class Display extends React.Component {
 
   
   render() {
-  
+    const {itemDisplay}= this.props
     return (
-      <div className="display-conteiner " style={this.props.itemDisplay} >
-
+      <div className="display-conteiner " style={itemDisplay} >
         <div className="display-item--cowboy"></div>
         <div className="display-item" style={{justifyContent: 'flex-start'}} > <div className="display-item--prison"></div></div>
 
