@@ -16,21 +16,23 @@ class ConteinerContent extends React.Component {
         [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
         { taskDescription: 'Помести преступника в клетку(центр).' },
         { task: { justifyContent: 'flex-start' } },
-        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] }],
+        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
+          {locationCells:{justifyContent: 'center'}}],
 
         [{ introductory: 'Начало положено. Как известно "Дорогу осилит идущий".' },
         { taskDescription: 'Теперь помести преступника в клету справа.' },
         { task: { justifyContent: 'flex-start' } },
-        { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.']] }],
+        { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.']] },
+        {locationCells:{justifyContent: 'flex-end'}}],
 
         [{ introductory: 'Компания, в моем лице, считает что ты молодец!' },
         { taskDescription: 'Ты знаешь, что нужно сделать.' },
         { task: { justifyContent: 'center' } },
-        { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] }]
+        { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] },
+        {locationCells:{ justifyContent: 'flex-start' }}]
       ],
-      chLevel: 0,
       textElem: { justifyContent: 'flex-start' },
-
+      chLevel: 0,
     }
   };
   setLevelDown = () => {
@@ -97,10 +99,10 @@ class ConteinerContent extends React.Component {
   };
 
   render() {
-    
-    const {setLevelUp,setLevelDown, test, test2} = this;
-    const { textElem,level, chLevel } = this.state;
- 
+
+    const { setLevelUp, setLevelDown, test, test2 } = this;
+    const { textElem, level, chLevel } = this.state;
+
     return (
       <div className="content-flex">
         <div className="text-conteiner">
