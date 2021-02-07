@@ -130,12 +130,12 @@ class ConteinerContent extends React.Component {
 
   render() {
 
-    const { setLevelUp, setLevelDown, test, test2 } = this;
+    const { setLevelUp, setLevelDown, test, test2, Modal } = this;
     const { newLev } = this.state;
 
     return (
       <div className="content-flex">
-        <this.Modal />
+        <Modal />
         <div className="text-conteiner">
           <TitleHeader introductory={newLev[0].introductory} />
           <TextBtn setLevelDown={setLevelDown}
