@@ -6,7 +6,7 @@ import TextBtn from '../Element/TextBtn'
 import InfoLevel from '../Element/InfoLevel'
 import Output from '../Element/Output'
 import StartButton from '../Element/StartButton'
-import {alt, setLevelUp} from '../MainContent/ContentLogic'
+import { alt, setLevelUp } from '../MainContent/ContentLogic'
 
 
 class ConteinerContent extends React.Component {
@@ -19,7 +19,7 @@ class ConteinerContent extends React.Component {
         { taskDescription: 'Помести преступника в клетку(центр).' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
-        { locationCells: { justifyContent: 'center' } }, { id: 1 }, ],
+        { locationCells: { justifyContent: 'center' } }, { id: 1 },],
 
         [{ introductory: 'Начало положено. Как известно "Дорогу осилит идущий".' },
         { taskDescription: 'Теперь помести преступника в клету справа.' },
@@ -37,52 +37,72 @@ class ConteinerContent extends React.Component {
       chLevel: 0,
 
       newLev: [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
-        { taskDescription: 'Помести преступника в клетку(центр).' },
-        { task: { justifyContent: 'flex-start' } },
-        { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
-        { locationCells: { justifyContent: 'center' } }, { id: 1 }]
+      { taskDescription: 'Помести преступника в клетку(центр).' },
+      { task: { justifyContent: 'flex-start' } },
+      { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
+      { locationCells: { justifyContent: 'center' } }, { id: 1 }],
+
+      modalState: false
     }
   };
   setLevelDown = () => {
-    if(this.state.newLev[5].id !== 1){
+    if (this.state.newLev[5].id !== 1) {
       this.setState({
         newLev: this.state.level[(this.state.newLev[5].id) - 2]
       })
     }
-   alt('Что то там')
+    alt('Что то там')
   };
 
   setLevelUp = () => {
-    if(this.state.newLev[5].id !== 3){
+    if (this.state.newLev[5].id !== 3) {
       this.setState({
         newLev: this.state.level[this.state.newLev[5].id]
       })
-    } 
+    }
   };
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.newLev.slice()
     newDisplay[6] = (inpt)
-  
     this.setState({
       newLev: newDisplay
     })
   };
 
+
+// active
+  Modal = () => {
+    return (
+      <div className="modal"> 
+        <div className='modal__content' onClick={e => e.stopPropagation()}>
+          <div className="modal__text"><p> Джо cбежал</p></div>
+        </div>
+      </div>)
+  }
+
+
+
+
   test2 = () => {
 
-    try {
-     const clone = this.state.newLev.slice() // клонирую state
-      
-    
-     
-     const separation = clone[6]//убираю лишнии пробелы и точки с запятой
+
+    const clone = this.state.newLev.slice() // клонирую state
+    console.log(typeof clone[6], 'элемент для проверки')
+    if (clone[6] == undefined) {
+      console.log('не подходящее выражение')
+      console.log('и вообще')
+      // сделать дисплей тру 
+    } else {
+
+      const separation = clone[6]//убираю лишнии пробелы и точки с запятой
         .replace(/\s/g, '')
-       .split(';')
+        .split(';')
         .filter(function (item) {
-           return item !== "";
-       });
-  
+          return item !== "";
+        });
+      console.log(separation, 'шаг 2 separation')
+
       const transform = separation.map(function (item) { // убираю лишнее и делаю заглавные буквы
 
         return (item.split(':')[0])
@@ -92,25 +112,20 @@ class ConteinerContent extends React.Component {
           ).join('') + ':' + item.split(':')[1]
       });
 
-   
       const obj = transform.map(function (item) { // делаю подходящий для JSX формат.
         const newObj = {};
         newObj[item.split(':')[0]] = item.split(':')[1]
         return newObj;
       })
-     
-    
+      clone[2].task = obj[0]
 
-    clone[2].task = obj[0]
-      
-    this.setState({
-      newLev: clone
-    }) 
+      this.setState({
+        newLev: clone
+      })
+
     }
 
-    catch {
-      console.log('err test2 in outPut', console.error(this.error))
-    }
+
   };
 
   render() {
@@ -120,10 +135,11 @@ class ConteinerContent extends React.Component {
 
     return (
       <div className="content-flex">
+        <this.Modal />
         <div className="text-conteiner">
           <TitleHeader introductory={newLev[0].introductory} />
           <TextBtn setLevelDown={setLevelDown}
-            setLevelUp={setLevelUp} levelCount ={newLev[5].id} />
+            setLevelUp={setLevelUp} levelCount={newLev[5].id} />
           <InfoLevel infoElement={newLev[3].infoElement}
             taskDescription={newLev[1].taskDescription} />
           <Output test={test} />
