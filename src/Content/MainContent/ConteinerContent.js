@@ -74,7 +74,7 @@ class ConteinerContent extends React.Component {
 // active
   Modal = () => {
     return (
-      <div className="modal"> 
+      <div className="modal "> 
         <div className='modal__content' onClick={e => e.stopPropagation()}>
           <div className="modal__text"><p> Джо cбежал</p></div>
         </div>
