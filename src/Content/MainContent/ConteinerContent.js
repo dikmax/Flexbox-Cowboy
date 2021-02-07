@@ -6,7 +6,7 @@ import TextBtn from '../Element/TextBtn'
 import InfoLevel from '../Element/InfoLevel'
 import Output from '../Element/Output'
 import StartButton from '../Element/StartButton'
-
+import {alt} from '../MainContent/ContentLogic'
 
 
 class ConteinerContent extends React.Component {
@@ -49,7 +49,7 @@ class ConteinerContent extends React.Component {
         newLev: this.state.level[(this.state.newLev[5].id) - 2]
       })
     }
-   
+   alt('Что то там')
   };
 
   setLevelUp = () => {
