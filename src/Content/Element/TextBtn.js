@@ -4,12 +4,12 @@ import '../Element/TextBtn.css';
 
 
 
-const ButtonText = ({ setLevelDown, setLevelUp } = this.props) => {
+const ButtonText = ({ setLevelDown, setLevelUp,levelCount } = this.props) => {
 
     return (
         <div className="text-button__conteiner">
             <div className="text-flex">
-                <div className="button__text"><p>Уровень</p></div>
+                <div className="button__text"><p>Уровень {levelCount}</p></div>
                 <div className="batton-item">
                     <div ><button className="button--1" type="button"
                         onClick={setLevelDown}>назад</button></div>

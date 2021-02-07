@@ -2,10 +2,14 @@
     color: #666666;
 font-family: 'Times New Roman', Times, serif;
 font-size: 20px;
+
 }
 .level__header{
     
     font-weight: 600;
+}
+.level__ul{
+    min-height: 169px;/*!поправить css*/
 }
 .level__li{
     font-family:Times;

@@ -120,7 +120,7 @@ class ConteinerContent extends React.Component {
         <div className="text-conteiner">
           <TitleHeader introductory={newLev[0].introductory} />
           <TextBtn setLevelDown={setLevelDown}
-            setLevelUp={setLevelUp} />
+            setLevelUp={setLevelUp} levelCount ={newLev[5].id} />
           <InfoLevel infoElement={newLev[3].infoElement}
             taskDescription={newLev[1].taskDescription} />
           <Output test={test} />
