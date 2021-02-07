@@ -95,11 +95,12 @@ class ConteinerContent extends React.Component {
         newObj[item.split(':')[0]] = item.split(':')[1]
         return newObj;
       })
-      // clone[2].task,
-    
      
-      console.log({...obj})
-  
+    clone[2].task = obj[0]
+      
+    this.setState({
+      newLev: clone
+    }) 
     }
 
     catch {
