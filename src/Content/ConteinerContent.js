@@ -89,13 +89,15 @@ class ConteinerContent extends React.Component {
           ).join('') + ':' + item.split(':')[1]
       });
 
-
+   
       const obj = transform.map(function (item) { // делаю подходящий для JSX формат.
         const newObj = {};
         newObj[item.split(':')[0]] = item.split(':')[1]
         return newObj;
       })
      
+    
+
     clone[2].task = obj[0]
       
     this.setState({
