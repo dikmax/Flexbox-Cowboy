@@ -6,7 +6,7 @@ import TextBtn from '../Element/TextBtn'
 import InfoLevel from '../Element/InfoLevel'
 import Output from '../Element/Output'
 import StartButton from '../Element/StartButton'
-import {alt} from '../MainContent/ContentLogic'
+import {alt, setLevelUp} from '../MainContent/ContentLogic'
 
 
 class ConteinerContent extends React.Component {
