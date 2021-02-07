@@ -58,43 +58,46 @@ class ConteinerContent extends React.Component {
   };
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
-    const newDisplay = this.state.level
-    newDisplay[this.state.chLevel][2].task = (inpt)
+    const newDisplay = this.state. newLev.slice()
+    newDisplay[newDisplay.length] = (inpt)
     this.setState({
       level: newDisplay
     })
+    console.log(newDisplay)
   };
 
   test2 = () => {
 
     try {
-      let clone = this.state.level[this.state.chLevel].slice(0) // клонирую state
-      const separation = clone[2].task //убираю лишнии пробелы и точки с запятой
+      let clone = this.state.newLev // клонирую state
+    
+     const separation = clone[5]//убираю лишнии пробелы и точки с запятой
         .replace(/\s/g, '')
-        .split(';')
+       .split(';')
         .filter(function (item) {
-          return item !== "";
-        });
+           return item !== "";
+       });
+   console.log(separation, 'separation' )
+  //     const transform = separation.map(function (item) { // убираю лишнее и делаю заглавные буквы
 
-      const transform = separation.map(function (item) { // убираю лишнее и делаю заглавные буквы
+  //       return (item.split(':')[0])
+  //         .split('-')
+  //         .map(
+  //           (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+  //         ).join('') + ':' + item.split(':')[1]
+  //     });
 
-        return (item.split(':')[0])
-          .split('-')
-          .map(
-            (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
-          ).join('') + ':' + item.split(':')[1]
-      });
+  //     console.log(transform, 'transform' )
 
-      const obj = transform.map(function (item) { // делаю подходящий для JSX формат.
-        const newObj = {};
-        newObj[item.split(':')[0]] = item.split(':')[1]
-        return newObj;
-      })
-      console.log(...obj)
-      this.setState({
-        textElem: obj[0]
-      })
-      console.log(obj)
+  //     const obj = transform.map(function (item) { // делаю подходящий для JSX формат.
+  //       const newObj = {};
+  //       newObj[item.split(':')[0]] = item.split(':')[1]
+  //       return newObj;
+  //     })
+  //     console.log(obj, 'transform')
+      
+   
+    
 
     }
 
