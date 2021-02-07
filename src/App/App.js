@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navigation from '../Navigation/Navigation'
 import Footer from '../Footer/Footer'
-import ConteinerContent from '../Content/ConteinerContent'
+import ConteinerContent from '../Content/MainContent/ConteinerContent'
 
 class App extends React.Component{
   constructor(props){

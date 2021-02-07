@@ -1,11 +1,13 @@
 import React from 'react';
-import '../Content/ConteinerContent.css';
-import Display from './Display/Display';
-import TitleHeader from '../Content/Element/TitleHeader'
-import TextBtn from '../Content/Element/TextBtn'
-import InfoLevel from '../Content/Element/InfoLevel'
-import Output from '../Content/Element/Output'
-import StartButton from '../Content/Element/StartButton'
+import '../MainContent/ConteinerContent.css';
+import Display from '../Display/Display';
+import TitleHeader from '../Element/TitleHeader'
+import TextBtn from '../Element/TextBtn'
+import InfoLevel from '../Element/InfoLevel'
+import Output from '../Element/Output'
+import StartButton from '../Element/StartButton'
+
+
 
 class ConteinerContent extends React.Component {
   constructor(props) {
@@ -47,6 +49,7 @@ class ConteinerContent extends React.Component {
         newLev: this.state.level[(this.state.newLev[5].id) - 2]
       })
     }
+   
   };
 
   setLevelUp = () => {
@@ -54,7 +57,7 @@ class ConteinerContent extends React.Component {
       this.setState({
         newLev: this.state.level[this.state.newLev[5].id]
       })
-    }
+    } 
   };
 
   test = (inpt) => { // получаю из инпута текс, отдаю в стейт
