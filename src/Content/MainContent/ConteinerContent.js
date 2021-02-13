@@ -3,8 +3,8 @@ import '../MainContent/ConteinerContent.css';
 import Display from '../Display/Display';
 import TitleHeader from '../Element/TitleHeader'
 import TextBtn from '../Element/TextBtn'
-import InfoLevel from '../Element/InfoLevel'
-import Output from '../Element/Output'
+import InfoLevel from '../Element/InfoLevel/InfoLevel'
+import Output from '../Element/Output/Output'
 import StartButton from '../Element/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
 

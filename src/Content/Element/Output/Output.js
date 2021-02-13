@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Element/Output.css';
+import './Output.css';
 
 
 

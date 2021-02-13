@@ -1,6 +1,5 @@
 import React from 'react';
-
-import '../Element/InfoLevel.css';
+import './InfoLevel.css';
 
 
 
