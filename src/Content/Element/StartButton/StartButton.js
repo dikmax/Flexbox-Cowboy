@@ -1,12 +1,7 @@
 import React from 'react';
-
-import '../Element/StartButton.css';
-
-
-
+import './StartButton.css';
 
 const StartButton = ({ test } = this.props) => {
-
     return (
         <div className="start">
             <div className="start_conteiner">
@@ -18,7 +13,7 @@ const StartButton = ({ test } = this.props) => {
                 >Старт</button></div>
 
         </div>)
-        
+
 };
 
 export default StartButton;

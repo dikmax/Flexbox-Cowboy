@@ -2,10 +2,10 @@ import React from 'react';
 import '../MainContent/ConteinerContent.css';
 import Display from '../Display/Display';
 import TitleHeader from '../Element/TitleHeader'
-import TextBtn from '../Element/TextBtn'
+import TextBtn from '../Element/TextBtn/TextBtn'
 import InfoLevel from '../Element/InfoLevel/InfoLevel'
 import Output from '../Element/Output/Output'
-import StartButton from '../Element/StartButton'
+import StartButton from '../Element/StartButton/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
 
 
