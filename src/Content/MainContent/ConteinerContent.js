@@ -6,7 +6,7 @@ import TextBtn from '../Element/TextBtn'
 import InfoLevel from '../Element/InfoLevel'
 import Output from '../Element/Output'
 import StartButton from '../Element/StartButton'
-import { alt, setLevelUp } from '../MainContent/ContentLogic'
+import PopUp from '../Element/PopUp/PopUp'
 
 
 class ConteinerContent extends React.Component {
@@ -51,7 +51,7 @@ class ConteinerContent extends React.Component {
         newLev: this.state.level[(this.state.newLev[5].id) - 2]
       })
     }
-    alt('Что то там')
+    
   };
 
   setLevelUp = () => {
@@ -71,15 +71,8 @@ class ConteinerContent extends React.Component {
   };
 
 
-// active
-  Modal = () => {
-    return (
-      <div className="modal "> 
-        <div className='modal__content' onClick={e => e.stopPropagation()}>
-          <div className="modal__text"><p> Джо cбежал</p></div>
-        </div>
-      </div>)
-  }
+
+ 
 
 
 
@@ -130,12 +123,12 @@ class ConteinerContent extends React.Component {
 
   render() {
 
-    const { setLevelUp, setLevelDown, test, test2, Modal } = this;
+    const { setLevelUp, setLevelDown, test, test2} = this;
     const { newLev } = this.state;
 
     return (
       <div className="content-flex">
-        <Modal />
+        <PopUp />
         <div className="text-conteiner">
           <TitleHeader introductory={newLev[0].introductory} />
           <TextBtn setLevelDown={setLevelDown}
