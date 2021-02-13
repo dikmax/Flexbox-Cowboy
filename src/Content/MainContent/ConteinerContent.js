@@ -42,7 +42,7 @@ class ConteinerContent extends React.Component {
       { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
       { locationCells: { justifyContent: 'center' } }, { id: 1 }],
 
-      modalState: false
+      modalState: true
     }
   };
   setLevelDown = () => {
@@ -69,13 +69,6 @@ class ConteinerContent extends React.Component {
       newLev: newDisplay
     })
   };
-
-
-
- 
-
-
-
 
   test2 = () => {
 
@@ -124,11 +117,11 @@ class ConteinerContent extends React.Component {
   render() {
 
     const { setLevelUp, setLevelDown, test, test2} = this;
-    const { newLev } = this.state;
+    const { newLev, modalState } = this.state;
 
     return (
       <div className="content-flex">
-        <PopUp />
+        <PopUp modalState ={modalState} />
         <div className="text-conteiner">
           <TitleHeader introductory={newLev[0].introductory} />
           <TextBtn setLevelDown={setLevelDown}

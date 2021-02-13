@@ -6,13 +6,14 @@ class PopUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: true
+      active: this.props.modalState
     }
   };
 
   render() {
     const test = (e) => {
       let q = e.target
+      console.log(e.target, this.props.modalState)
       return q.className = "modal"
     }
 
