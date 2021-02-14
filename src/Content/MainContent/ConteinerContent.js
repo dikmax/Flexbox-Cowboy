@@ -1,7 +1,7 @@
 import React from 'react';
 import '../MainContent/ConteinerContent.css';
 import Display from '../Display/Display';
-import TitleHeader from '../Element/TitleHeader'
+import TitleHeader from '../Element/TitleHeader/TitleHeader'
 import TextBtn from '../Element/TextBtn/TextBtn'
 import InfoLevel from '../Element/InfoLevel/InfoLevel'
 import Output from '../Element/Output/Output'
