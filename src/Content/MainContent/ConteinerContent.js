@@ -72,7 +72,6 @@ class ConteinerContent extends React.Component {
 
   test2 = () => {
 
-
     const clone = this.state.newLev.slice() // клонирую state
     console.log(typeof clone[6], 'элемент для проверки')
     if (clone[6] == undefined) {
@@ -90,7 +89,6 @@ class ConteinerContent extends React.Component {
       console.log(separation, 'шаг 2 separation')
 
       const transform = separation.map(function (item) { // убираю лишнее и делаю заглавные буквы
-
         return (item.split(':')[0])
           .split('-')
           .map(
@@ -103,6 +101,7 @@ class ConteinerContent extends React.Component {
         newObj[item.split(':')[0]] = item.split(':')[1]
         return newObj;
       })
+      
       clone[2].task = obj[0]
 
       this.setState({
