@@ -77,7 +77,11 @@ class ConteinerContent extends React.Component {
     if (clone[6] == undefined) {
       console.log('не подходящее выражение')
       console.log('и вообще')
-      // сделать дисплей тру 
+      // сделать дисплей тру ********************
+      this.setState({
+        levelCompleted: !this.state.levelCompleted
+      })
+
     } else {
 
       const separation = clone[6]//убираю лишнии пробелы и точки с запятой
