@@ -60,7 +60,7 @@ class ConteinerContent extends React.Component {
     }
   };
 
-  test = (inpt) => { // получаю из инпута текс, отдаю в стейт
+  userInpt = (inpt) => { // получаю из инпута текс, отдаю в стейт
     const newDisplay = this.state.newLev.slice()
     newDisplay[6] = (inpt)
     this.setState({
@@ -114,8 +114,8 @@ class ConteinerContent extends React.Component {
   ifLevelTrue = () => {
     console.log('iflevleTRUE')
   }
-  ifLevelFalse = () => { // деятельность если введено не правильно
-    console.log('это можно выносить')
+  ifLevelFalse = () => { // если введено не правильно
+    
     setTimeout(() => {
       this.setState({
         levelCompleted: false
@@ -124,7 +124,7 @@ class ConteinerContent extends React.Component {
   }
 
   render() {
-    const { setLevelUp, setLevelDown, test, responseUserProcessing } = this;
+    const { setLevelUp, setLevelDown, userInpt, responseUserProcessing } = this;
     const { newLev, levelCompleted } = this.state;
 
     return (
@@ -136,7 +136,7 @@ class ConteinerContent extends React.Component {
             setLevelUp={setLevelUp} levelCount={newLev[5].id} />
           <InfoLevel infoElement={newLev[3].infoElement}
             taskDescription={newLev[1].taskDescription} />
-          <Output test={test} />
+          <Output userInpt={userInpt} />
           <StartButton responseUserProcessing={responseUserProcessing} />
         </div>
         <Display displayPrison={newLev[4].locationCells} displayCowboy={newLev[2].task} />

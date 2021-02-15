@@ -5,7 +5,7 @@ import './Output.css';
 
 
 
-const Output = ({test} = this.props) => {
+const Output = ({userInpt} = this.props) => {
 
     return (
         <div className="exit-conteiner">
@@ -14,7 +14,7 @@ const Output = ({test} = this.props) => {
               placeholder="Поле для написания кода"
              // defaultValue='justify-content: flex-end'
                 rows="3"
-                onChange={(e) => {test(e.target.value) }}
+                onChange={(e) => {userInpt(e.target.value) }}
             ></textarea>
             <p className="exit--after"> &#125;</p>
         </div>)
