@@ -51,7 +51,7 @@ class ConteinerContent extends React.Component {
         newLev: this.state.level[(this.state.newLev[5].id) - 2]
       })
     }
-    
+
   };
 
   setLevelUp = () => {
@@ -70,61 +70,63 @@ class ConteinerContent extends React.Component {
     })
   };
 
-  test2 = () => {
+  ifLevelFalse = () => { // деятельность если введено не правильно
+    console.log('это можно выносить')
+    this.setState({
+      levelCompleted: false
+    })
+  };
 
-    const clone = this.state.newLev.slice() // клонирую state
-    console.log(typeof clone[6], 'элемент для проверки')
-    if (clone[6] == undefined) {
-      console.log('не подходящее выражение')
-      console.log('и вообще')
-      // сделать дисплей тру ********************
-      this.setState({
-        levelCompleted: !this.state.levelCompleted
-      })
-
-    } else {
-
-      const separation = clone[6]//убираю лишнии пробелы и точки с запятой
-        .replace(/\s/g, '')
-        .split(';')
-        .filter(function (item) {
-          return item !== "";
-        });
-      console.log(separation, 'шаг 2 separation')
-
-      const transform = separation.map(function (item) { // убираю лишнее и делаю заглавные буквы
-        return (item.split(':')[0])
-          .split('-')
-          .map(
-            (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
-          ).join('') + ':' + item.split(':')[1]
+  forJsxFormat = (itemArr) => {
+    const separation = itemArr[6]//убираю лишнии пробелы и точки с запятой
+      .replace(/\s/g, '')
+      .split(';')
+      .filter(function (item) {
+        return item !== "";
       });
+    console.log(separation, 'шаг 2 separation')
 
-      const obj = transform.map(function (item) { // делаю подходящий для JSX формат.
-        const newObj = {};
-        newObj[item.split(':')[0]] = item.split(':')[1]
-        return newObj;
-      })
+    const transform = separation.map(function (item) { // убираю лишнее и делаю заглавные буквы
+      return (item.split(':')[0])
+        .split('-')
+        .map(
+          (word, index) => index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+        ).join('') + ':' + item.split(':')[1]
+    });
 
-      clone[2].task = obj[0]
+    const obj = transform.map(function (item) { // делаю подходящий для JSX формат.
+      const newObj = {};
+      newObj[item.split(':')[0]] = item.split(':')[1]
+      return newObj;
+    })
 
-      this.setState({
-        newLev: clone
-      })
+    console.log(obj[0], 'obj[0]', itemArr[4].locationCells, 'clone[4]')
 
+    itemArr[2].task = obj[0]
+
+    this.setState({
+      newLev: itemArr
+    })
+  }
+  test2 = () => {
+    const clone = this.state.newLev.slice() // клонирую state
+
+    if (clone[6] === undefined) {
+      this.ifLevelFalse()
+    } else {
+      this.forJsxFormat(clone)
     }
-
 
   };
 
   render() {
 
-    const { setLevelUp, setLevelDown, test, test2} = this;
+    const { setLevelUp, setLevelDown, test, test2 } = this;
     const { newLev, levelCompleted } = this.state;
 
     return (
       <div className="content-flex">
-        <PopUp levelCompleted ={levelCompleted} />
+        <PopUp levelCompleted={levelCompleted} />
         <div className="text-conteiner">
           <TitleHeader introductory={newLev[0].introductory} />
           <TextBtn setLevelDown={setLevelDown}
