@@ -34,7 +34,6 @@ class ConteinerContent extends React.Component {
         { locationCells: { justifyContent: 'flex-start' } }, { id: 3 }]
       ],
       textElem: { justifyContent: 'flex-start' },
-      chLevel: 0,
 
       newLev: [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
       { taskDescription: 'Помести преступника в клетку(центр).' },
@@ -77,12 +76,8 @@ class ConteinerContent extends React.Component {
       this.forJsxFormat(clone)
     }
   };
-  ifLevelFalse = () => { // деятельность если введено не правильно
-    console.log('это можно выносить')
-    this.setState({
-      levelCompleted: false
-    })
-  };
+
+
   forJsxFormat = (itemArr) => {
     const separation = itemArr[6]//убираю лишнии пробелы и точки с запятой
       .replace(/\s/g, '')
@@ -108,16 +103,28 @@ class ConteinerContent extends React.Component {
 
     console.log(obj[0], 'obj[0]', itemArr[4].locationCells, 'clone[4]')
 
-    itemArr[2].task = obj[0]
-
     this.setState({
       newLev: itemArr
     })
+    if (JSON.stringify(obj[0]) === JSON.stringify(itemArr[4].locationCells)) { // проверка пройден ли уровеь
+      this.ifLevelTrue()
+    } else { this.ifLevelFalse() }
+    itemArr[2].task = obj[0]
+  }
+  ifLevelTrue = () => {
+    console.log('iflevleTRUE')
+  }
+  ifLevelFalse = () => { // деятельность если введено не правильно
+    console.log('это можно выносить')
+    setTimeout(() => {
+      this.setState({
+        levelCompleted: false
+      })
+    }, 800)
   }
 
   render() {
-
-    const { setLevelUp, setLevelDown, test, responseUserProcessing  } = this;
+    const { setLevelUp, setLevelDown, test, responseUserProcessing } = this;
     const { newLev, levelCompleted } = this.state;
 
     return (
@@ -130,7 +137,7 @@ class ConteinerContent extends React.Component {
           <InfoLevel infoElement={newLev[3].infoElement}
             taskDescription={newLev[1].taskDescription} />
           <Output test={test} />
-          <StartButton responseUserProcessing ={responseUserProcessing} />
+          <StartButton responseUserProcessing={responseUserProcessing} />
         </div>
         <Display displayPrison={newLev[4].locationCells} displayCowboy={newLev[2].task} />
       </div>
