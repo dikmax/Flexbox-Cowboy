@@ -7,6 +7,7 @@ import InfoLevel from '../Element/InfoLevel/InfoLevel'
 import Output from '../Element/Output/Output'
 import StartButton from '../Element/StartButton/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
+
 class ConteinerContent extends React.Component {
   constructor(props) {
     super(props);
@@ -99,8 +100,6 @@ class ConteinerContent extends React.Component {
       return newObj;
     })
 
-    console.log(obj[0], 'obj[0]', itemArr[4].locationCells, 'clone[4]')
-
     this.setState({
       newLev: itemArr
     })
@@ -109,11 +108,13 @@ class ConteinerContent extends React.Component {
     } else { this.ifLevelFalse() }
     itemArr[2].task = obj[0]
   }
-  ifLevelTrue = () => {
-    console.log('iflevleTRUE')
+  ifLevelTrue = () => {// хотел добавить звук но что то не вышло. Причину не нашел.
+    setTimeout(() => {
+      this.setLevelUp()
+    }, 1500)
   }
   ifLevelFalse = () => { // если введено не правильно
-    
+
     setTimeout(() => {
       this.setState({
         levelCompleted: false
