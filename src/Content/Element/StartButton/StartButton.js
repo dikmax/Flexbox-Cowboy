@@ -1,7 +1,7 @@
 import React from 'react';
 import './StartButton.css';
 
-const StartButton = ({ test } = this.props) => {
+const StartButton = ({ responseUserProcessing  } = this.props) => {
 
     return (
         <div className="start">
@@ -10,7 +10,7 @@ const StartButton = ({ test } = this.props) => {
                 <button
                     className="start__button"
                     type="button"
-                    onClick={test}
+                    onClick={responseUserProcessing }
                 >Старт</button></div>
 
         </div>)

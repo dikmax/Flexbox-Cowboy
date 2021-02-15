@@ -69,7 +69,7 @@ class ConteinerContent extends React.Component {
     })
   };
 
-  test2 = () => {
+  responseUserProcessing = () => {
     const clone = this.state.newLev.slice() // клонирую state
     if (clone[6] === undefined) {
       this.ifLevelFalse()
@@ -117,7 +117,7 @@ class ConteinerContent extends React.Component {
 
   render() {
 
-    const { setLevelUp, setLevelDown, test, test2 } = this;
+    const { setLevelUp, setLevelDown, test, responseUserProcessing  } = this;
     const { newLev, levelCompleted } = this.state;
 
     return (
@@ -130,7 +130,7 @@ class ConteinerContent extends React.Component {
           <InfoLevel infoElement={newLev[3].infoElement}
             taskDescription={newLev[1].taskDescription} />
           <Output test={test} />
-          <StartButton test={test2} />
+          <StartButton responseUserProcessing ={responseUserProcessing} />
         </div>
         <Display displayPrison={newLev[4].locationCells} displayCowboy={newLev[2].task} />
       </div>
