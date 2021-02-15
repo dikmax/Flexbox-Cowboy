@@ -51,7 +51,6 @@ class ConteinerContent extends React.Component {
         newLev: this.state.level[(this.state.newLev[5].id) - 2]
       })
     }
-
   };
 
   setLevelUp = () => {
@@ -70,13 +69,20 @@ class ConteinerContent extends React.Component {
     })
   };
 
+  test2 = () => {
+    const clone = this.state.newLev.slice() // клонирую state
+    if (clone[6] === undefined) {
+      this.ifLevelFalse()
+    } else {
+      this.forJsxFormat(clone)
+    }
+  };
   ifLevelFalse = () => { // деятельность если введено не правильно
     console.log('это можно выносить')
     this.setState({
       levelCompleted: false
     })
   };
-
   forJsxFormat = (itemArr) => {
     const separation = itemArr[6]//убираю лишнии пробелы и точки с запятой
       .replace(/\s/g, '')
@@ -108,16 +114,6 @@ class ConteinerContent extends React.Component {
       newLev: itemArr
     })
   }
-  test2 = () => {
-    const clone = this.state.newLev.slice() // клонирую state
-
-    if (clone[6] === undefined) {
-      this.ifLevelFalse()
-    } else {
-      this.forJsxFormat(clone)
-    }
-
-  };
 
   render() {
 
