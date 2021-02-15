@@ -7,8 +7,6 @@ import InfoLevel from '../Element/InfoLevel/InfoLevel'
 import Output from '../Element/Output/Output'
 import StartButton from '../Element/StartButton/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
-
-
 class ConteinerContent extends React.Component {
   constructor(props) {
     super(props);
