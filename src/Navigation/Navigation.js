@@ -10,11 +10,12 @@ class Navigation extends React.Component {
     super(props);
     this.state = {
       usePlay: false,
-      text: 'ВКЛючить атмосферу',
-      stAudio: {audio = new Audio(Music)} 
-
+      text: 'ВКЛючить атмосферу'
     }
   };
+
+  audio = new Audio(Music)
+
 
   newState = () => {
 
@@ -23,21 +24,21 @@ class Navigation extends React.Component {
         this.setState({
           text: 'ВЫКЛючить атмосферу'
         })
+        this.audio.play()
       } else {
         this.setState({
           text: 'ВКЛючить атмосферу'
         })
+        this.audio.pause()
       }
     })
     this.play()
   };
 
-  play = ({ usePlay, audio } = this.state) => {
-  
+  play = ({ usePlay } = this.state) => {
+
     if (usePlay === true) {
-      
-    } else {
-     console.log('elsy')
+      console.log(this.audio)
     }
   }
 
