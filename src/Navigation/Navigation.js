@@ -16,9 +16,10 @@ class Navigation extends React.Component {
 
   newState = () => {
 
-    this.setState({
-      usePlay: (!this.state.usePlay)
+    this.setState(()=>{
+      return{usePlay: !this.state.usePlay}
     })
+   console.log(this.state.usePlay)
     if (this.state.usePlay == true) {
       this.setState({
         text: 'ВЫКЛючить атмосферу'
