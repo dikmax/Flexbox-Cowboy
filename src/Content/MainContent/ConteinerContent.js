@@ -7,6 +7,7 @@ import InfoLevel from '../Element/InfoLevel/InfoLevel'
 import Output from '../Element/Output/Output'
 import StartButton from '../Element/StartButton/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
+import Music from "./ugly.mp3"
 
 class ConteinerContent extends React.Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class ConteinerContent extends React.Component {
       ],
       textElem: { justifyContent: 'flex-start' },
 
-      newLev: [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
+      newLev: [{ introductory: 'Привет! "FLEXBOX  просто необходимо знать в соврменной верстке". Мы пойдем от простого к сложному "Первый блок"' },
       { taskDescription: 'Помести преступника в клетку(центр).' },
       { task: { justifyContent: 'flex-start' } },
       { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
@@ -112,6 +113,8 @@ class ConteinerContent extends React.Component {
     setTimeout(() => {
       this.setLevelUp()
     }, 1500)
+    let music = new Audio(Music)
+    music.play()
   }
   ifLevelFalse = () => { // если введено не правильно
 
