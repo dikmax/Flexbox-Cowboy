@@ -1,5 +1,6 @@
 import './Navigation.css';
 import Music from "./ugly.mp3"
+
 function Navigation() {
 
   let music = new Audio(Music)
