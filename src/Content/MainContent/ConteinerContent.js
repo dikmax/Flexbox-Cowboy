@@ -113,7 +113,7 @@ class ConteinerContent extends React.Component {
     setTimeout(() => {
       this.setLevelUp()
     }, 1500)
-   
+
   }
   ifLevelFalse = () => { // если введено не правильно
 
@@ -126,8 +126,8 @@ class ConteinerContent extends React.Component {
       this.setState({
         levelCompleted: true
       })
-    },1600)
-    
+    }, 2000)
+
   }
 
   render() {
