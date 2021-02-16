@@ -7,7 +7,7 @@ import InfoLevel from '../Element/InfoLevel/InfoLevel'
 import Output from '../Element/Output/Output'
 import StartButton from '../Element/StartButton/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
-import Music from "./ugly.mp3"
+
 
 class ConteinerContent extends React.Component {
   constructor(props) {
@@ -122,8 +122,12 @@ class ConteinerContent extends React.Component {
         levelCompleted: false
       })
     }, 800)
-    // let music = new Audio(Music)
-    // music.play()
+    setTimeout(() => {
+      this.setState({
+        levelCompleted: true
+      })
+    },1600)
+    
   }
 
   render() {
