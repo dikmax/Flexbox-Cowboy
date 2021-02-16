@@ -16,35 +16,29 @@ class Navigation extends React.Component {
 
   newState = () => {
 
-    this.setState(()=>{
-      return{usePlay: !this.state.usePlay}
+    this.setState({ usePlay: !this.state.usePlay }, () => {
+      if (this.state.usePlay == true) {
+        this.setState({
+          text: 'ВЫКЛючить атмосферу'
+        })
+      } else {
+        this.setState({
+          text: 'ВКЛючить атмосферу'
+        })
+      }
     })
-   console.log(this.state.usePlay)
-    if (this.state.usePlay == true) {
-      this.setState({
-        text: 'ВЫКЛючить атмосферу'
-      })
-    } else {
-      this.setState({
-        text: 'ВКЛючить атмосферу'
-      })
-    }
+    this.play()
+  };
 
-  }
-  sd = () => {
-    let music = new Audio(Music);
-    if (this.state.usePlay == true) {
-      music.play()
-      this.setState({
-        text: 'ВЫКЛючить атмосферу'
-      })
+  play = ({ usePlay } = this.state) => {
+    let audio = new Audio(Music);
+    if (usePlay === true) {
+      audio.play()
     } else {
-      music.pause()
-      this.setState({
-        text: 'ВКЛючить атмосферу'
-      })
+      audio.pause()
     }
   }
+
 
   render() {
     const { text } = this.state
