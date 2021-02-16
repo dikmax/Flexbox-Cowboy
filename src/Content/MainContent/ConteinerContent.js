@@ -113,8 +113,7 @@ class ConteinerContent extends React.Component {
     setTimeout(() => {
       this.setLevelUp()
     }, 1500)
-    let music = new Audio(Music)
-    music.play()
+   
   }
   ifLevelFalse = () => { // если введено не правильно
 
@@ -123,6 +122,8 @@ class ConteinerContent extends React.Component {
         levelCompleted: false
       })
     }, 800)
+    // let music = new Audio(Music)
+    // music.play()
   }
 
   render() {
