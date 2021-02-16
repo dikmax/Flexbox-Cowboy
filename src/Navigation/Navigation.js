@@ -10,7 +10,8 @@ class Navigation extends React.Component {
     super(props);
     this.state = {
       usePlay: false,
-      text: 'ВКЛючить атмосферу'
+      text: 'ВКЛючить атмосферу',
+      audio: new Audio(Music)
     }
   };
 
@@ -30,12 +31,12 @@ class Navigation extends React.Component {
     this.play()
   };
 
-  play = ({ usePlay } = this.state) => {
-    let audio = new Audio(Music);
+  play = ({ usePlay, audio } = this.state) => {
+  
     if (usePlay === true) {
-      audio.play()
+     audio.play()
     } else {
-      audio.pause()
+     console.log('elsy')
     }
   }
 
