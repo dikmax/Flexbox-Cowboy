@@ -32,9 +32,7 @@ class ConteinerContent extends React.Component {
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] },
         { locationCells: { justifyContent: 'flex-start' } }, { id: 3 }]
       ],
-
-      textElem: { justifyContent: 'flex-start' },
-
+      
       newLev: [{ introductory: 'Привет! "FLEXBOX  просто необходимо знать в соврменной верстке". Мы пойдем от простого к сложному \n "Первый блок"' },
       { taskDescription: 'Помести преступника в клетку(центр).' },
       { task: { justifyContent: 'flex-start' } },
@@ -109,7 +107,7 @@ class ConteinerContent extends React.Component {
     itemArr[2].task = obj[0]
   };
 
-  ifLevelTrue = () => {// хотел добавить звук но что то не вышло. Причину не нашел.
+  ifLevelTrue = () => {
     setTimeout(() => {
       this.setLevelUp()
     }, 1500)
