@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-around;
     min-height: 100%;
-  /*  background-image: url(C:\Users\Home\Desktop\CSS KOVBOY\pet-project\src\Source\IMG\iconfinder_Artboard_14_4859072.svg);*/
 };
 .content:last-child {
   margin-right: 0;
