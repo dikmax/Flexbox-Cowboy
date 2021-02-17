@@ -1,7 +1,7 @@
 import React from 'react';
-import './TextBtn.css';
+import './LevelChange.css';
 
-const ButtonText = ({ setLevelDown, setLevelUp,levelCount }) => {
+const LevelChange= ({ setLevelDown, setLevelUp,levelCount }) => {
 
     return (
         <div className="text-button__conteiner">
@@ -19,5 +19,5 @@ const ButtonText = ({ setLevelDown, setLevelUp,levelCount }) => {
 
 };
 
-export default ButtonText;
+export default LevelChange;
 

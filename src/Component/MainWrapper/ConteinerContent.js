@@ -2,8 +2,8 @@ import React from 'react';
 import '../MainWrapper/ConteinerContent.css';
 import Display from '../Display/Display';
 import TitleHeader from '../Element/TitleHeader/TitleHeader'
-import TextBtn from '../Element/TextBtn/TextBtn'
-import InfoLevel from '../Element/InfoLevel/InfoLevel'
+import LevelChange from '../Element/LevelChange/LevelChange'
+import SubTitle from '../Element/SubTitle/SubTitle'
 import Output from '../Element/Output/Output'
 import StartButton from '../Element/StartButton/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
@@ -141,9 +141,9 @@ class ConteinerContent extends React.Component {
         <PopUp levelCompleted={levelCompleted} />
         <div className="text-conteiner">
           <TitleHeader introductory={newLev[0].introductory} />
-          <TextBtn setLevelDown={setLevelDown}
+          <LevelChange setLevelDown={setLevelDown}
             setLevelUp={setLevelUp} levelCount={newLev[5].id} />
-          <InfoLevel infoElement={newLev[3].infoElement}
+          <SubTitle infoElement={newLev[3].infoElement}
             taskDescription={newLev[1].taskDescription} />
           <Output userInpt={userInpt} />
           <StartButton responseUserProcessing={responseUserProcessing} />

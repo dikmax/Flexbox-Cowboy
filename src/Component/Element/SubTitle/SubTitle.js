@@ -1,7 +1,7 @@
 import React from 'react';
-import './InfoLevel.css';
+import './SubTitle.css';
 
-class InfoLevel extends React.Component {
+class SubTitle extends React.Component {
 
     render() {
         const { taskDescription } = this.props;
@@ -25,5 +25,5 @@ class InfoLevel extends React.Component {
     }
 };
 
-export default InfoLevel;
+export default SubTitle;
 
