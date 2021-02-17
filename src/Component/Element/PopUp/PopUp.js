@@ -1,11 +1,12 @@
 import React from 'react'
 import './PopUp.css'
-
+import Ha from './ha.mp3'
 const PopUp = ({ levelCompleted } = this.props) => {
-
+  const haha = new Audio(Ha)
   const classes = ['modal']
   if (levelCompleted !== true) {
     classes.push('active')
+    haha.play()
   };
 
   return (
