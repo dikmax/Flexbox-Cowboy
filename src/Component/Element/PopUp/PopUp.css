@@ -1,43 +1,43 @@
-.modal{
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-    transform: scale(0);
-  }
-  
-  .modal__content{
-    border: 3px solid #666666;
-    padding: 20px;
-    border-radius: 12px;
-    background-color: #fafafa;
-    width: 200px;
-    height: 200px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  
-  }
-  .modal.active{
-    transform: scale(1);
-  }
-  
-  .modal__text{
-    color: #343434;
-    font-size: 26px;
-    font-family: fantasy;
-  }
-  .modal__close{
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transform: scale(0);
+}
+
+.modal__content {
+  background: url("/src/Source/png/rdr2.png") no-repeat;
+  border: 3px solid #666666;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fafafa;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.active {
+  transform: scale(1);
+}
+
+.modal__text {
+  color: #343434;
+  font-size: 26px;
+  font-family: fantasy;
+}
+.modal__close {
   padding-left: 10px;
-  }
-  .close__btn{
-    font-family: fantasy;
-    font-size: 18px;
-    border-radius: 5px;
-  }
+}
+.close__btn {
+  font-family: fantasy;
+  font-size: 18px;
+  border-radius: 5px;
+}
