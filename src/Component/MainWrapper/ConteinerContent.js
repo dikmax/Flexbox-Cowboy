@@ -8,14 +8,13 @@ import Output from '../Element/Output/Output'
 import StartButton from '../Element/StartButton/StartButton'
 import PopUp from '../Element/PopUp/PopUp'
 
-
 class ConteinerContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
 
       level: [
-        [{ introductory:'Привет!  "FLEXBOX  просто необходимо знать в соврменной верстке". Мы пойдем от простого к сложному \n "Первый блок"' },
+        [{ introductory: 'Привет!  "FLEXBOX  просто необходимо знать в соврменной верстке". Мы пойдем от простого к сложному \n "Первый блок"' },
         { taskDescription: 'Помести преступника в клетку(центр).' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },
@@ -33,6 +32,7 @@ class ConteinerContent extends React.Component {
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] },
         { locationCells: { justifyContent: 'flex-start' } }, { id: 3 }]
       ],
+
       textElem: { justifyContent: 'flex-start' },
 
       newLev: [{ introductory: 'Привет! "FLEXBOX  просто необходимо знать в соврменной верстке". Мы пойдем от простого к сложному \n "Первый блок"' },
@@ -76,7 +76,6 @@ class ConteinerContent extends React.Component {
       this.forJsxFormat(clone)
     }
   };
-
 
   forJsxFormat = (itemArr) => {
     const separation = itemArr[6]//убираю лишнии пробелы и точки с запятой
@@ -127,7 +126,6 @@ class ConteinerContent extends React.Component {
         levelCompleted: true
       })
     }, 2000)
-
   }
 
   render() {
