@@ -107,26 +107,26 @@ class ConteinerContent extends React.Component {
       this.ifLevelTrue()
     } else { this.ifLevelFalse() }
     itemArr[2].task = obj[0]
-  }
+  };
+
   ifLevelTrue = () => {// хотел добавить звук но что то не вышло. Причину не нашел.
     setTimeout(() => {
       this.setLevelUp()
     }, 1500)
+  };
 
-  }
   ifLevelFalse = () => { // если введено не правильно
-
     setTimeout(() => {
       this.setState({
         levelCompleted: false
       })
-    }, 800)
+    }, 800);
     setTimeout(() => {
       this.setState({
         levelCompleted: true
       })
-    }, 2000)
-  }
+    }, 2000);
+  };
 
   render() {
     const { setLevelUp, setLevelDown, userInpt, responseUserProcessing } = this;
