@@ -9,5 +9,6 @@
   background-color: rgba(239, 240, 241, 0.603);
   color: #343434;
   max-height: 410px;
+  white-space: pre-line;
 }
 
