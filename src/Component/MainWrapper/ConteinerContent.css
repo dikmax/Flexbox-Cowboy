@@ -6,6 +6,10 @@
 
 
 .text-conteiner{
+  background: url("/src/Source/png/send.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: bottom;
   flex-basis: 40%;
   background-color: rgba(239, 240, 241, 0.603);
   color: #343434;
