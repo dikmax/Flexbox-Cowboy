@@ -1,5 +1,5 @@
 import React from 'react';
-import '../MainContent/ConteinerContent.css';
+import '../MainWrapper/ConteinerContent.css';
 import Display from '../Display/Display';
 import TitleHeader from '../Element/TitleHeader/TitleHeader'
 import TextBtn from '../Element/TextBtn/TextBtn'

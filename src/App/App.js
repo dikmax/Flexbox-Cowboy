@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Navigation from '../Navigation/Navigation'
+import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import ConteinerContent from '../Content/MainContent/ConteinerContent'
+import ConteinerContent from '../Component/MainWrapper/ConteinerContent'
 
 class App extends React.Component{
   constructor(props){
@@ -14,7 +14,7 @@ class App extends React.Component{
 render(){ 
   return (
     <div>
-      <Navigation/>
+      <Header/>
       <ConteinerContent/>
       <Footer/>
     </div>

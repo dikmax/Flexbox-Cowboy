@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Display/Display.css'
+import './Display.css'
 
 
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import './Navigation.css';
+import './Header.css';
 import Music from "./ugly.mp3"
 
 
 
 
-class Navigation extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,7 +57,7 @@ class Navigation extends React.Component {
   }
 };
 
-export default Navigation;
+export default Header;
 
 
 
