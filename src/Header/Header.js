@@ -20,7 +20,7 @@ class Header extends React.Component {
   newState = () => {
 
     this.setState({ usePlay: !this.state.usePlay }, () => {
-      if (this.state.usePlay == true) {
+      if (this.state.usePlay === true) {
         this.setState({
           text: 'ВЫКЛючить атмосферу'
         })
