@@ -1,6 +1,7 @@
 .footer{
+   
+    flex-basis: 5%;
     background-color: #666666;
-    padding-top: 120px;
     color :#ffffff;
     font-size: 24px;
     display: flex;

@@ -3,9 +3,9 @@
     justify-content: flex-end;
 }
 .start_conteiner{
-margin-top: -42px;
+margin-top: -200px; /*!поправить*/
 }
-.start__button{ 
+.start__button{  
    
 display: flex;
 justify-content: center;

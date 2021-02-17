@@ -1,4 +1,5 @@
 .header {
+  flex-basis: 5%;
   background-color: #666666;
   display: flex;
 }

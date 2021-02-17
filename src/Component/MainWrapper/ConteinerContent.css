@@ -1,14 +1,17 @@
 .content-flex {
+  flex-basis: 90%;
   display: flex;
   min-height: 494px;
-}
+} 
 
 
 .text-conteiner{
   flex-basis: 40%;
   background-color: rgba(239, 240, 241, 0.603);
   color: #343434;
-  max-height: 410px;
   white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+
 }
 

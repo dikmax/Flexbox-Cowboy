@@ -1,7 +1,7 @@
 .exit-conteiner{
     background-color: beige;
-    color: #666666;
-    font-weight: 600;
+    color: #666666; 
+  
     font-size: 18px;
     display: flex;
     flex-direction: column;
@@ -10,16 +10,15 @@
     background-size: contain;
     border-radius: 10px 10px 10px 10px;
 }
-.exit--befor{
-    font-weight: 600;
+.exit--befor{ 
+  margin-top: 0;
     font-size: 20px;
-    margin-bottom: 0;
+  
     margin-left: 3px;
 
 }
 .exit__input{
     color: #666666;
-    font-weight: 600;
     font-size: 18px;
     background-color: #fafafa21;
  border-radius: 5px;
@@ -28,9 +27,5 @@
 
 }
 .exit--after{
-    margin-left: 11px;
-    font-weight: 600;
     font-size: 20px;
-    margin-top: 0;
-
 }
