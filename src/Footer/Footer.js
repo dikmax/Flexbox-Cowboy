@@ -6,5 +6,4 @@ function Footer() {
     <div className="footer" ><div ><p>Подвал</p></div></div>
   );
 }
-
 export default Footer;
