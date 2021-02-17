@@ -32,7 +32,7 @@ class ConteinerContent extends React.Component {
         { infoElement: [['justify-content: center; ~ располагает елемент в центре блока.'], ['третий'], ['justify-content: flex-end; ~ располагает элемент в правом углу по оси X.'], ['justify-content: flex-start; ~ располагает элемент в левом углу по оси X.']] },
         { locationCells: { justifyContent: 'flex-start' } }, { id: 3 }]
       ],
-      
+
       newLev: [{ introductory: 'Привет! "FLEXBOX  просто необходимо знать в соврменной верстке". Мы пойдем от простого к сложному \n "Первый блок"' },
       { taskDescription: 'Помести преступника в клетку(центр).' },
       { task: { justifyContent: 'flex-start' } },
@@ -71,20 +71,18 @@ class ConteinerContent extends React.Component {
     if (clone[6] === undefined) {
       this.ifLevelFalse()
     } else {
-      // this.forJsxFormat(clone)
       this.checkUserInput(clone)
     }
   };
 
-  checkUserInput = (item,id = 6)=>{
-    
+  checkUserInput = (item, id = 6) => { //Проверяю написание, будет расширяться.
     let check = item[id].slice()
     check.includes(';') ? this.forJsxFormat(item) : this.ifLevelFalse();
     console.log(check)
   }
 
   forJsxFormat = (itemArr) => {
-    const separation = itemArr[6]//убираю лишнии пробелы и точки с запятой
+    const separation = itemArr[6] //убираю лишнии пробелы и точки с запятой
       .replace(/\s/g, '')
       .split(';')
       .filter(function (item) {
