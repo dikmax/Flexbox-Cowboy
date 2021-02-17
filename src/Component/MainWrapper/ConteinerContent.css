@@ -2,10 +2,9 @@
   flex-basis: 90%;
   display: flex;
   min-height: 494px;
-} 
+}
 
-
-.text-conteiner{
+.text-conteiner {
   background: url("/src/Source/png/send.png");
   background-repeat: repeat-x;
   background-size: contain;
@@ -16,6 +15,4 @@
   white-space: pre-line;
   display: flex;
   flex-direction: column;
-
 }
-

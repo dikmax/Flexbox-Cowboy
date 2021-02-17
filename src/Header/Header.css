@@ -3,7 +3,7 @@
   display: flex;
 }
 .logo {
-    max-height:min-content;
+  max-height: min-content;
   padding-left: 3%;
   color: #ffffff;
   font-size: 23px;
@@ -19,9 +19,9 @@
   justify-content: space-around;
 }
 
-.logo-span--2{
-color: #f1f1f1;
+.logo-span--2 {
+  color: #f1f1f1;
 }
-.logo-span{
+.logo-span {
   color: #343434;
-  }
+}
