@@ -1,14 +1,12 @@
 import React from 'react'
 import './PopUp.css'
 
-
-
 const PopUp = ({ levelCompleted } = this.props) => {
 
   const classes = ['modal']
   if (levelCompleted !== true) {
     classes.push('active')
-  }
+  };
 
   return (
     <div className={classes.join(' ')}>
@@ -19,6 +17,6 @@ const PopUp = ({ levelCompleted } = this.props) => {
       {/* <div className="modal__close"><button className="close__btn" onClick={() => test()}>X</button></div> */}
     </div>
   )
-}
+};
 
 export default PopUp;
