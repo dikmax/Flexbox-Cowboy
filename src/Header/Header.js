@@ -38,7 +38,7 @@ class Header extends React.Component {
       <nav className="header">
         <div className="logo"><p>Pavel<span className="logo-span">VLG</span>4</p></div>
         <div className="header__conteyner-flex">
-          <div className="header__item"><p onClick={playMusic}>{text}</p></div>
+          <div className="header__item"><p onClick={playMusic} className="header__text">{text}</p></div>
         </div>
       </nav>
     );

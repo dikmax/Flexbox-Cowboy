@@ -25,3 +25,7 @@
 .logo-span {
   color: #343434;
 }
+.header__text:hover{
+  transform: scale(1.2);
+  transition: all 500ms ease 0s;
+}
