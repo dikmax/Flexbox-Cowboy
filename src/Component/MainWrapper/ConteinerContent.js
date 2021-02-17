@@ -71,9 +71,17 @@ class ConteinerContent extends React.Component {
     if (clone[6] === undefined) {
       this.ifLevelFalse()
     } else {
-      this.forJsxFormat(clone)
+      // this.forJsxFormat(clone)
+      this.checkUserInput(clone)
     }
   };
+
+  checkUserInput = (item,id = 6)=>{
+    
+    let check = item[id].slice()
+    check.includes(';') ? this.forJsxFormat(item) : this.ifLevelFalse();
+    console.log(check)
+  }
 
   forJsxFormat = (itemArr) => {
     const separation = itemArr[6]//убираю лишнии пробелы и точки с запятой
