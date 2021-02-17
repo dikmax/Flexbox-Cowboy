@@ -1,12 +1,14 @@
 .footer{
+    background-color: #666666;
     padding-top: 120px;
-    color: #002776;
+    color :#ffffff;
     font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
 } 
 .footer__flex{
+    color: inherit;
     flex-basis: 80%;
     display: flex;
     align-items: center;
