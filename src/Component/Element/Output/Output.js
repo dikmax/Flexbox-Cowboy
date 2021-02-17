@@ -1,23 +1,19 @@
 import React from 'react';
-
 import './Output.css';
 
-
-
-
-const Output = ({userInpt} = this.props) => {
+const Output = ({ userInpt }) => {
 
     return (
         <div className="exit-conteiner">
             <p className="exit--befor">  .class &ensp;&#123; <br />display: flex; </p>
             <textarea className="exit__input"
-              placeholder="Поле для написания кода"
-             // defaultValue='justify-content: flex-end'
-                rows="3"
-                onChange={(e) => {userInpt(e.target.value) }}
+                placeholder="Поле для написания кода"
+                rows="4"
+                onChange={(e) => { userInpt(e.target.value) }}
             ></textarea>
             <p className="exit--after"> &#125;</p>
         </div>)
+
 };
 
 export default Output;
