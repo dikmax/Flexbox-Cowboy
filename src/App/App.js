@@ -5,11 +5,11 @@ import Footer from '../Footer/Footer'
 import ConteinerContent from '../Component/MainWrapper/ConteinerContent'
 
 class App extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-    editBtnValue: ['good','ffod']
-  }};
+  
+// Комментарии:
+//
+//
+//
 
 render(){ 
   return (
