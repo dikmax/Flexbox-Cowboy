@@ -1,18 +1,11 @@
 import React from 'react';
 import './InfoLevel.css';
 
-
-
-
 class InfoLevel extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: 'Text'
-        }
-    };
- 
+
     render() {
+        const { taskDescription } = this.props;
+
         let infoElement = this.props.infoElement.map((item) => {// информация по левелу
             return <li className="level__li" key={
                 Math.random(1, 42)
@@ -21,7 +14,7 @@ class InfoLevel extends React.Component {
 
         return (
             <div className="level">
-                <div className="level__header"><p>{this.props.taskDescription}</p></div>
+                <div className="level__header"><p>{taskDescription}</p></div>
                 <div className="level__ul">
                     <ul>
                         {infoElement}
