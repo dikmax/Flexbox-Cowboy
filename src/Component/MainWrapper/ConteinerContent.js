@@ -15,7 +15,7 @@ class ConteinerContent extends React.Component {
     this.state = {
 
       level: [
-        [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному "Первый блок"' },
+        [{ introductory: 'Привет! "Информация о блоке". Мы пойдем от простого к сложному.  "Первый блок"' },
         { taskDescription: 'Помести преступника в клетку(центр).' },
         { task: { justifyContent: 'flex-start' } },
         { infoElement: [['justify-content ~ свойство которое отвечает за расположение элементов по оси X.'], ['justify-content: center; ~ располагает елемент в центре блока.']] },

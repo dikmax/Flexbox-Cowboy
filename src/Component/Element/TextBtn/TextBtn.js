@@ -1,10 +1,7 @@
 import React from 'react';
-
 import './TextBtn.css';
 
-
-
-const ButtonText = ({ setLevelDown, setLevelUp,levelCount } = this.props) => {
+const ButtonText = ({ setLevelDown, setLevelUp,levelCount }) => {
 
     return (
         <div className="text-button__conteiner">
@@ -18,7 +15,7 @@ const ButtonText = ({ setLevelDown, setLevelUp,levelCount } = this.props) => {
                 </div>
             </div>
         </div> 
-    );
+    )
 
 };
 
