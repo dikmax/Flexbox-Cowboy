@@ -11,8 +11,8 @@ class Header extends React.Component {
     }
   };
 
-  audio = new Audio(Music);
-
+  audio = new Audio(Music)
+ 
   playMusic = () => {
     this.setState({ usePlay: !this.state.usePlay }, () => {
       if (this.state.usePlay === true) {
