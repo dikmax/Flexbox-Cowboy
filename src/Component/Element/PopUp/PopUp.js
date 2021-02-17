@@ -1,7 +1,7 @@
 import React from 'react'
 import './PopUp.css'
 import Ha from './Ha.mp3'
-const PopUp = ({ levelCompleted } = this.props) => {
+const PopUp = ({ levelCompleted }) => {
 
   let haha = new Audio(Ha)
   haha.volume = 0.2
