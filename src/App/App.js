@@ -12,7 +12,7 @@ import MainWrapper from '../Component/MainWrapper/MainWrapper'
 
  PS: Картинки хочу нарисовать сам, но пока пользуюсь тем что гугл дал.
  PS2: Тут есть звуки в Header 'атмосфера' и крайне противный в случае неправильного ввода в Component/element/popup - но я не отключал*/
- /*Основной код написан в Component/MainWrapper*/
+ /*Основной код написан в MainWrapper/MainWrapper*/
 
  /*надеюсь твои глаза кровить не будут)*/
 
