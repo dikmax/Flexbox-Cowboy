@@ -16,10 +16,10 @@ import MainWrapper from '../Component/MainWrapper/MainWrapper'
 
  /*надеюсь твои глаза кровить не будут)*/
 
- /* Личное. ToDo : переделать классы в функции(Хуки), !=== на !, очистить таймеры, вынести стейт в JSON, упростить смену левела*/
+ 
 
 class App extends React.Component{
-  
+  /*Личное. ToDo : переделать классы в функции(Хуки), !==$ на !$, очистить таймеры, вынести стейт в JSON, упростить смену левела до одной функции*/
 render(){ 
   return (
     <div className='app__wrapper'>
