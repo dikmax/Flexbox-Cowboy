@@ -1,12 +1,12 @@
 import React from 'react';
-import '../MainWrapper/ConteinerContent.css';
+import '../MainWrapper/MainWrapper.css';
 import Display from '../Display/Display';
-import TitleHeader from '../Element/TitleHeader/TitleHeader'
-import LevelChange from '../Element/LevelChange/LevelChange'
-import SubTitle from '../Element/SubTitle/SubTitle'
-import Output from '../Element/Output/Output'
-import StartButton from '../Element/StartButton/StartButton'
-import PopUp from '../Element/PopUp/PopUp'
+import TitleHeader from '../Element/TitleHeader/TitleHeader';
+import LevelChange from '../Element/LevelChange/LevelChange';
+import SubTitle from '../Element/SubTitle/SubTitle';
+import Output from '../Element/Output/Output';
+import StartButton from '../Element/StartButton/StartButton';
+import PopUp from '../Element/PopUp/PopUp';
 
 class ConteinerContent extends React.Component {
   constructor(props) {
